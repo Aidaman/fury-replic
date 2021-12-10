@@ -7,10 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
+import { DragDropComponent } from './drag-drop/drag-drop.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DragDropComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +21,7 @@ import { Routes, RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
