@@ -7,6 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+import { Safehtml } from './safehtml.pipe';
+
 import { AllInOneTableComponent } from './tables/all-in-one-table/all-in-one-table.component';
 import { CalendarComponent } from './apps/calendar/calendar.component';
 import { PrimaryComponent } from './apps/inbox/primary/primary.component';
@@ -53,6 +67,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     GoogleMapsComponent,
     IconsComponent,
     DashboardComponent,
+    Safehtml,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +75,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
+    MatListModule,
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatTooltipModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },

@@ -1,1 +1,540 @@
-<p>components works!</p>
+<header>
+  <h2>Components</h2>
+  <h4>
+    <span>Home</span>
+    <mat-icon aria-hidden="false" aria-label="All-In-One Table"
+      >navigate_next</mat-icon
+    >
+    Components
+  </h4>
+</header>
+
+<div class="container-fluid row">
+  <div class="col-2 side-components">
+    <mat-list>
+      <mat-list-item>Components</mat-list-item>
+      <a href="" *ngFor="let item of items"
+        ><mat-list-item>{{ item }}</mat-list-item></a
+      >
+    </mat-list>
+  </div>
+
+  <div class="col"></div>
+
+  <div class="col-9">
+
+
+    <div class="col-12 row block" *ngFor="let div of divs">
+      <div class="col-{{div.width}}">
+      <h2>Preview</h2>
+       <!-- <div [innerHTML]="div.tagContent | safehtml"></div> -->
+     <!--   {{div.tagContent}}
+       <button mat-icon-button matTooltip="Favorite this">
+        <mat-icon>favorite</mat-icon>
+      </button> -->
+      </div>
+      <div class="col">
+        <h1>{{div.header}}</h1>
+        <span class="gray">&lt;{{div.tag}}&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                {{div.description}}
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                {{div.sourceCode}}
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-12 row block">
+      <div class="col-4">
+        <h2>Preview</h2>
+
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label
+              >State
+              <mat-icon role="img" aria-hidden="true" data-mat-icon-type="font"
+                >arrow_drop_down</mat-icon
+              ></mat-label
+            >
+            <input
+              matInput
+              aria-label="State"
+              [matAutocomplete]="auto"
+              [formControl]="stateCtrl"
+            />
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option
+                *ngFor="let state of filteredStates | async"
+                [value]="state.name"
+              >
+                <img
+                  class="example-option-img"
+                  aria-hidden
+                  [src]="state.flag"
+                  height="25"
+                />
+                <span>{{ state.name }}</span> |
+                <small>Population: {{ state.population }}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col">
+        <h1>Autocomplete</h1>
+        <span class="gray">&lt;mat-autocomplete&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Input text can be used with autocomplete to help users who have
+                limited literacy or who write in a foreign language.
+              </p>
+
+              <p>
+                For example, autocomplete can: <br />
+                Suggest input as it’s typed (refreshing suggestions with each
+                keystroke)<br />
+                Fill a field with default input text<br />
+                Pressing the return button accepts the current autocomplete
+                suggestion
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-input-container</span>&gt;<br />
+                &lt;<span class="yellow">mat-label</span>&gt;State&lt;<span
+                  class="yellow"
+                  >/mat-label</span
+                >&gt;<br />
+                &lt;<span class="yellow">input</span> type=<span class="green"
+                  >"text"</span
+                >
+                matInput [matAutocomplete]=<span class="green">"auto"</span>
+                [formControl]=<span class="green">"stateCtrl"</span>&gt;<br />
+                &lt;<span class="yellow">mat-autocomplete</span> #auto=<span
+                  class="green"
+                  >"matAutocomplete"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-option</span> *ngFor=<span
+                  class="green"
+                  >"let option of options"</span
+                >
+                [value]=<span class="green">"option"</span>&gt;<br />
+                ｛｛ option ｝｝<br />
+                &lt;<span class="yellow">/mat-option</span>&gt;<br />
+                &lt;<span class="yellow">/mat-autocomplete</span>&gt;<br />
+                &lt;<span class="yellow">/mat-input-container</span>&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-5">
+        <h2>Preview</h2>
+        <div class="buttons">
+          <button mat-button class="col-6">Button</button>
+          <button mat-raised-button class="col-6">Button</button>
+          <button mat-button color="primary" class="col-6">Primary</button>
+          <button mat-raised-button color="primary" class="col-6">
+            Primary
+          </button>
+          <button mat-button color="accent" class="col-6">Accent</button>
+          <button mat-raised-button color="accent" class="col-6">Accent</button>
+          <button mat-button color="warn" class="col-6">Warn</button>
+          <button mat-raised-button color="warn" class="col-6">Warn</button>
+          <button mat-button disabled="true" class="col-6">Disabled</button>
+          <button mat-raised-button disabled="true" class="col-6">
+            Disabled
+          </button>
+          <!-- <button mat-icon-button class="col-3"><mat-icon>menu</mat-icon></button> -->
+
+          <button mat-icon-button color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-icon-button color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-icon-button disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+
+          <button mat-mini-fab color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-mini-fab color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-mini-fab disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+
+          <button mat-fab color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-fab color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-fab color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-fab disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+          <mat-button-toggle-group>
+            <mat-button-toggle value="left"
+              ><mat-icon>format_align_left</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="center"
+              ><mat-icon>format_align_center</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="right"
+              ><mat-icon>format_align_right</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="justify"
+              ><mat-icon>format_align_justify</mat-icon></mat-button-toggle
+            >
+          </mat-button-toggle-group>
+          <mat-button-toggle-group multiple>
+            <mat-button-toggle>Flour</mat-button-toggle>
+            <mat-button-toggle>Eggs</mat-button-toggle>
+            <mat-button-toggle>Sugar</mat-button-toggle>
+            <mat-button-toggle>Milk</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+      <div class="col">
+        <h1>Buttons</h1>
+        <span class="gray">&lt;mat-button&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Material buttons trigger an ink reaction on press. They may
+                display text, imagery, or both. Flat buttons and raised buttons
+                are the most commonly used types.
+              </p>
+
+              <p>
+                <b>Flat buttons:</b> Flat buttons are text-only buttons. They
+                may be used in dialogs, toolbars, or inline. They do not lift,
+                but fill with color on press.
+              </p>
+
+              <p>
+                <b>Raised buttons:</b> Raised buttons are rectangular-shaped
+                buttons. They may be used inline. They lift and display ink
+                reactions on press.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;button mat-button&gt;Button&lt;/button&gt;<br />
+                &lt;button mat-button
+                color="primary"&gt;Primary&lt;/button&gt;<br />
+                &lt;button mat-button color="accent"&gt;Accent&lt;/button&gt;<br />
+                &lt;button mat-button color="warn"&gt;Warn&lt;/button&gt;<br />
+                &lt;button mat-button
+                disabled="true"&gt;Disabled&lt;/button&gt;&lt;button
+                mat-raised-button&gt;Button&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="primary"&gt;Primary&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="accent"&gt;Accent&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="warn"&gt;Warn&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                disabled="true"&gt;Disabled&lt;/button&gt;&lt;button
+                mat-icon-button&gt;&lt;mat-icon&gt;menu&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="primary"&gt;&lt;mat-icon&gt;grade&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="accent"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;&lt;button
+                mat-fab
+                color="primary"&gt;&lt;mat-icon&gt;grade&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                color="accent"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="primary"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="accent"&gt;&lt;mat-icon&gt;thumb_up&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;&lt;mat-button-toggle-group&gt;<br />
+                &lt;mat-button-toggle
+                value="left"&gt;&lt;mat-icon&gt;format_align_left&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="center"&gt;&lt;mat-icon&gt;format_align_center&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="right"&gt;&lt;mat-icon&gt;format_align_right&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="justify"&gt;&lt;mat-icon&gt;format_align_justify&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;/mat-button-toggle-group&gt;<br />
+                &lt;mat-button-toggle-group multiple&gt;<br />
+                &lt;mat-button-toggle&gt;Flour&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Eggs&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Sugar&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Milk&lt;/mat-button-toggle&gt;<br />
+                &lt;/mat-button-toggle-group&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="col-12 row block">
+      <div class="col-7">
+        <h2>Preview</h2>
+
+        <mat-card>
+          <mat-card-header>
+            <img mat-card-avatar src="./assets/user.jpg" />
+            <mat-card-subtitle> Yesterday </mat-card-subtitle>
+            <mat-card-title>Юи Хирасава</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/1.jpg" />
+          <mat-card-content>
+            <p>
+              Piqued favour stairs it enable exeter as seeing. Remainder met
+              improving but engrossed sincerity age. Better but length gay
+              denied abroad are. Attachment astonished to on appearance
+              imprudence so collecting in excellence. Tiled way blind lived
+              whose new. The for fully had she there leave merit enjoy forth.
+            </p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <div fxLayout="row">
+              <button mat-icon-button>
+                <mat-icon>share</mat-icon>
+              </button>
+              <button mat-icon-button>
+                <mat-icon>favorite</mat-icon>
+              </button>
+              <span fxFlex></span>
+              <button mat-button>More Info</button>
+              <button mat-button>Save as</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col">
+        <h1>Cards</h1>
+        <span class="gray">&lt;mat-card&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Cards may contain a photo, text, and a link about a single
+                subject. They may display content containing elements of varying
+                size, such as photos with captions of variable length.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-card</span>&gt;<br />
+                &lt;<span class="yellow">mat-card-header</span>&gt;<br />
+                &lt;<span class="yellow"
+                  >img mat-card-avatar src="assets/img/avatars/3.jpg"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-subtitle</span>&gt;<br />
+                Yesterday &lt;<span class="yellow">/mat-card-subtitle</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-title</span>&gt;Gerald
+                Morris&lt;<span class="yellow">/mat-card-title</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card-header</span>&gt;<br />
+                &lt;<span class="yellow"
+                  >img mat-card-image src="assets/img/backgrounds/1.jpg"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-content</span>&gt;<br />
+                &lt;<span class="yellow">p</span>&gt;Piqued favour stairs it
+                enable exeter as seeing. Remainder met improving but engrossed
+                sincerity age. Better but length gay denied abroad are.
+                Attachment astonished to on appearance imprudence so collecting
+                in excellence. Tiled way blind lived whose new. The for fully
+                had she there leave merit enjoy forth. &lt;<span class="yellow"
+                  >/p</span
+                >&gt;<br />
+                &lt;<span class="yellow">/mat-card-content</span>&gt;<br />
+                &lt;<span class="yellow">mat-divider</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-divider</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-actions</span>&gt;<br />
+                &lt;<span class="yellow">div fxLayout="row"</span>&gt;<br />
+                &lt;<span class="yellow">button mat-icon-button</span>&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;share&lt;<span
+                  class="yellow"
+                  >/mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">button mat-icon-button</span>&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;favorite&lt;<span
+                  class="yellow"
+                  >/mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">span fxFlex</span>&gt;&lt;<span
+                  class="yellow"
+                  >/span</span
+                >&gt;<br />
+                &lt;<span class="yellow">button mat-button</span>&gt;<br />
+                More Info &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">button mat-button</span>&gt;<br />
+                Save as &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">/div</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card-actions</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card</span>&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <mat-checkbox>Checkbox</mat-checkbox><br>
+        <mat-checkbox color="primary" [checked]="true">Primary</mat-checkbox><br>
+        <mat-checkbox color="accent" [checked]="true">Accent</mat-checkbox><br>
+        <mat-checkbox color="warn" [checked]="true">Warn</mat-checkbox><br>
+        <mat-checkbox disabled [checked]="true">Disabled</mat-checkbox><br>
+        <mat-checkbox [indeterminate]="true">Indeterminate</mat-checkbox><br>
+      </div>
+      <div class="col">
+        <h1>Autocomplete</h1>
+        <span class="gray">&lt;mat-autocomplete&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Input text can be used with autocomplete to help users who have
+                limited literacy or who write in a foreign language.
+              </p>
+
+              <p>
+                For example, autocomplete can: <br />
+                Suggest input as it’s typed (refreshing suggestions with each
+                keystroke)<br />
+                Fill a field with default input text<br />
+                Pressing the return button accepts the current autocomplete
+                suggestion
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-input-container</span>&gt;<br />
+                &lt;<span class="yellow">mat-label</span>&gt;State&lt;<span
+                  class="yellow"
+                  >/mat-label</span
+                >&gt;<br />
+                &lt;<span class="yellow">input</span> type=<span class="green"
+                  >"text"</span
+                >
+                matInput [matAutocomplete]=<span class="green">"auto"</span>
+                [formControl]=<span class="green">"stateCtrl"</span>&gt;<br />
+                &lt;<span class="yellow">mat-autocomplete</span> #auto=<span
+                  class="green"
+                  >"matAutocomplete"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-option</span> *ngFor=<span
+                  class="green"
+                  >"let option of options"</span
+                >
+                [value]=<span class="green">"option"</span>&gt;<br />
+                ｛｛ option ｝｝<br />
+                &lt;<span class="yellow">/mat-option</span>&gt;<br />
+                &lt;<span class="yellow">/mat-autocomplete</span>&gt;<br />
+                &lt;<span class="yellow">/mat-input-container</span>&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>

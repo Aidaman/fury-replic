@@ -4,19 +4,21 @@
   padding: 0;
   z-index: 1;
   box-shadow: 0px 0px 5px rgb(44, 54, 73);
-  /* height: 750px;
-  overflow-y: scroll; */
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
 }
 
 .content {
-  background: rgb(230, 230, 230);
+  background: rgb(250, 250, 250);
+  padding: 50px 0 0 0;
 }
 
 .logo {
   padding: 15px 25px;
   background: rgb(33, 41, 57);
-  /* z-index: 1; */
-  /* position: fixed; */
+  z-index: 1;
+  position: fixed;
 }
 
 .logo_txt {
@@ -31,6 +33,7 @@
 }
 
 .user {
+  margin-top: 50px;
   background: rgb(33, 41, 57);
   text-align: center;
   padding: 25px 0;
@@ -115,6 +118,9 @@
   background: white;
   padding: 0 0 0 30px;
   box-shadow: 0px 0px 2px rgb(44, 54, 73);
+  margin: 0;
+  position: fixed;
+  z-index: 100;
 }
 
 .toolbar > div {
@@ -175,4 +181,34 @@
 }
 .user_top mat-icon {
   vertical-align: top;
+}
+
+.right {
+  padding: 0;
+}
+
+/* .sidebar:hover::-webkit-scrollbar {
+  display: block;
+} */
+
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+  /* display: none; */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background:rgb(33,41,57);
+}
+
+.sidebar::-webkit-scrollbar-track:hover {
+  background:rgb(33,41,57);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
 }

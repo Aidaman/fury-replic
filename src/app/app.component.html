@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <div class="row">
+    <div class="col-2"></div>
     <div class="col-2 sidebar">
-      <div class="logo">
+      <div class="logo col-2">
         <svg
           class="logo_img"
           viewBox="0 0 33.74 33.99"
@@ -94,7 +95,7 @@
           <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
         </a>
 
-        <div class="dropdown-menu col-2" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" routerLink="forms/form-elements"
             ><mat-icon aria-hidden="false" aria-label=""
               >insert_drive_file</mat-icon
@@ -126,7 +127,7 @@
           <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
         </a>
 
-        <div class="dropdown-menu col-2" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" routerLink="login"
             ><mat-icon aria-hidden="false" aria-label="">login</mat-icon
             ><span>Login Page</span></a
@@ -147,7 +148,7 @@
           <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
         </a>
 
-        <div class="dropdown-menu col-2" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" routerLink="page-layouts/simple"
             ><mat-icon aria-hidden="false" aria-label="">view_array</mat-icon
             ><span>Simple</span></a
@@ -182,7 +183,7 @@
           <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
         </a>
 
-        <div class="dropdown-menu col-2" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" routerLink="maps/google-maps"
             ><mat-icon aria-hidden="false" aria-label="">place</mat-icon
             ><span>Google Maps</span></a
@@ -200,7 +201,7 @@
           <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
         </a>
 
-        <div class="dropdown-menu col-2" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="#"
             ><mat-icon aria-hidden="false" aria-label="">view_headline</mat-icon
             ><span>Level1</span></a
@@ -208,8 +209,8 @@
         </div>
       </div>
     </div>
-    <div class="col-10 content">
-      <div class="toolbar row">
+    <div class="col-10 right">
+      <div class="toolbar row col-10">
         <div class="search col-5">
           <mat-icon aria-hidden="false" aria-label="">search</mat-icon>
           <input type="text" placeholder="Search..." class="col-12" />
@@ -233,7 +234,9 @@
           >
         </div>
       </div>
-      <router-outlet></router-outlet>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>
