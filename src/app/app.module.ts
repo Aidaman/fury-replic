@@ -28,7 +28,10 @@ import { BlankComponent } from './blank/blank.component';
 import { GoogleMapsComponent } from './maps/google-maps/google-maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from "@angular/material/input";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,30 +62,34 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    MatCardModule,
     MatIconModule,
     RouterModule.forRoot([
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'tables/all-in-one-table', component: AllInOneTableComponent },
-      { path: 'apps/calendar', component: CalendarComponent },
-      { path: 'apps/inbox/primary', component: PrimaryComponent },
-      { path: 'apps/chat', component: ChatComponent },
-      { path: 'apps/components', component: ComponentsComponent },
-      { path: 'forms/form-elements', component: FormElementsComponent },
-      { path: 'forms/form-wizard', component: FormWizardComponent },
-      { path: 'drag-and-drop', component: DragAndDropComponent },
-      { path: 'editor', component: EditorComponent },
-      { path: 'login', component: LoginComponent }, // ***
-      { path: 'register', component: RegisterComponent }, // ***
-      { path: 'forgot-password', component: ForgotPasswordComponent }, // ***
-      { path: 'page-layouts/simple', component: SimpleComponent },
-      { path: 'page-layouts/simple-tabbed', component: SimpleTabbedComponent },
-      { path: 'page-layouts/card', component: CardComponent },
-      { path: 'page-layouts/card-tabbed', component: CardTabbedComponent },
-      { path: 'coming-soon', component: ComingSoonComponent }, // ***
-      { path: 'blank', component: BlankComponent },
-      { path: 'maps/google-maps', component: GoogleMapsComponent },
-      { path: 'icons', component: IconsComponent },
+      {path: 'dashboard', component: DashboardComponent},
+      {path: 'tables/all-in-one-table', component: AllInOneTableComponent},
+      {path: 'apps/calendar', component: CalendarComponent},
+      {path: 'apps/inbox/primary', component: PrimaryComponent},
+      {path: 'apps/chat', component: ChatComponent},
+      {path: 'apps/components', component: ComponentsComponent},
+      {path: 'forms/form-elements', component: FormElementsComponent},
+      {path: 'forms/form-wizard', component: FormWizardComponent},
+      {path: 'drag-and-drop', component: DragAndDropComponent},
+      {path: 'editor', component: EditorComponent},
+      {path: 'login', component: LoginComponent}, // ***
+      {path: 'register', component: RegisterComponent}, // ***
+      {path: 'forgot-password', component: ForgotPasswordComponent}, // ***
+      {path: 'page-layouts/simple', component: SimpleComponent},
+      {path: 'page-layouts/simple-tabbed', component: SimpleTabbedComponent},
+      {path: 'page-layouts/card', component: CardComponent},
+      {path: 'page-layouts/card-tabbed', component: CardTabbedComponent},
+      {path: 'coming-soon', component: ComingSoonComponent}, // ***
+      {path: 'blank', component: BlankComponent},
+      {path: 'maps/google-maps', component: GoogleMapsComponent},
+      {path: 'icons', component: IconsComponent},
     ]),
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

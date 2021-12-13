@@ -1,1 +1,90 @@
-<p>form-elements works!</p>
+<div class="back-blue">
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+<mat-card>
+<mat-card-content>
+<mat-form-field>
+  <input matInput placeholder="Company" type="text" required>
+</mat-form-field>
+
+<div fxLayout.gt-sm="row" fxLayoutGap.gt-sm="16px">
+  <mat-form-field fxFlex>
+    <input matInput placeholder="First Name" type="text">
+  </mat-form-field>
+
+  <mat-form-field fxFlex>
+    <input matInput placeholder="Last Name" type="text" required>
+  </mat-form-field>
+</div>
+
+<mat-form-field>
+  <input matInput placeholder="Password" type="password" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput #lengthHint maxlength="10" placeholder="Hint Label and Max Length" type="text" required>
+  <mat-hint align="start">Try to type in more than 10 letters</mat-hint>
+  <mat-hint align="end">{{ lengthHint.value.length }}/10</mat-hint>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Disabled" disabled>
+</mat-form-field>
+  </mat-card-content>
+</mat-card>
+    </div>
+    <div class="col-6">
+
+      <mat-card>
+        <mat-card-content>
+          <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap.gt-sm="16px">
+            <mat-form-field color="primary" fxFlex.gt-sm>
+              <input matInput placeholder="Primary Color" type="text">
+            </mat-form-field>
+
+            <mat-form-field color="accent" fxFlex.gt-sm>
+              <input matInput placeholder="Accent Color" type="text">
+            </mat-form-field>
+
+            <mat-form-field color="warn" fxFlex.gt-sm>
+              <input matInput placeholder="Warn Color" type="text">
+            </mat-form-field>
+          </div>
+
+          <mat-form-field>
+            <input matInput placeholder="Username" type="text" value="DavidSmith">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field fxFlex.gt-sm>
+            <span matPrefix>+1 &nbsp;</span>
+            <input matInput placeholder="Mobile Phone" type="text" required>
+            <mat-icon matSuffix>smartphone</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field floatPlaceholder="never">
+            <input matInput placeholder="No Floating Placeholder" type="text" required>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput  placeholder="Click on the icon to the right for a Datepicker">
+            <button matSuffix ></button>
+          </mat-form-field>
+
+        </mat-card-content>
+      </mat-card>
+
+
+
+
+
+
+    </div>
+
+  </div>
+</div>
+

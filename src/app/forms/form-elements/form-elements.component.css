@@ -1,0 +1,11 @@
+.container{
+  margin-top: 10px;
+}
+.back-blue{
+  height: 300px;
+  width: 100.58%;
+  background: lightblue;
+  position: absolute;
+  left: -10px;
+}
+
