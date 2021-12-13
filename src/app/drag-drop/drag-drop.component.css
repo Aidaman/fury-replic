@@ -1,6 +1,4 @@
-body{
-  position:relative;
-}
+
 
 .blueRectangle{
     height: 170px;
@@ -26,19 +24,27 @@ span{
   color:black;
 }
 
+.BelowHeaderSpan{
+  color:gray;
+  padding:20px;
+}
+
+.ToDoHeader{
+  font-size:16px;
+  padding:20px;
+  padding-top:40px;
+}
+
 .example-container {
   width: 400px;
   max-width: 100%;
-  margin: 0 25px 25px 0;
+  margin: -50px 25px 50px 25px;
   display: inline-block;
   vertical-align: top;
   background-color:white;
-  position: absolute;
- top:5;
- z-index: 10;
-
-  
-  
+  border-radius:15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index:10;
 }
 
 .example-list {

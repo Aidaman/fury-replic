@@ -12,9 +12,9 @@ export class DragDropComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+  todo = ['Meeting with Denis', 'Interview scheduled with Frank', 'Party at Rakesh house', 'Interview with Nikita'];
 
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
+  done = ['Talk to Jeniffer', 'Get stuff done', 'Meet up with new coworkers', 'Have fun at work'];
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
