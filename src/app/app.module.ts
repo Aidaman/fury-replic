@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { Safehtml } from './safehtml.pipe';
 
@@ -42,6 +43,7 @@ import { BlankComponent } from './blank/blank.component';
 import { GoogleMapsComponent } from './maps/google-maps/google-maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Level5Component } from './level1/level2/level3/level4/level5/level5.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     IconsComponent,
     DashboardComponent,
     Safehtml,
+    Level5Component,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +90,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatCardModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatExpansionModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },
@@ -109,6 +113,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       { path: 'blank', component: BlankComponent },
       { path: 'maps/google-maps', component: GoogleMapsComponent },
       { path: 'icons', component: IconsComponent },
+      { path: 'level1/level2/level3/level4/level5', component: Level5Component },
     ]),
   ],
   providers: [],

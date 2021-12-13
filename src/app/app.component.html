@@ -87,15 +87,15 @@
           <span>Components</span>
         </a>
 
-        <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <mat-icon aria-hidden="false" aria-label=""
-            >insert_drive_file</mat-icon
-          >
-          <span>Forms</span>
-          <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
-        </a>
-
-        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
+        <mat-expansion-panel class="col-12">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon aria-hidden="false" aria-label=""
+                >insert_drive_file</mat-icon
+              >
+              <span>Forms</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
           <a class="dropdown-item" routerLink="forms/form-elements"
             ><mat-icon aria-hidden="false" aria-label=""
               >insert_drive_file</mat-icon
@@ -106,7 +106,7 @@
               >insert_drive_file</mat-icon
             ><span>Form Wizard</span></a
           >
-        </div>
+        </mat-expansion-panel>
 
         <a routerLink="drag-and-drop">
           <mat-icon aria-hidden="false" aria-label="">mouse</mat-icon>
@@ -121,34 +121,34 @@
         <br />
         <h5>PAGES</h5>
 
-        <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <mat-icon aria-hidden="false" aria-label="">lock</mat-icon>
-          <span>Authentication</span>
-          <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
-        </a>
-
-        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" routerLink="login"
+        <mat-expansion-panel class="col-12">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon aria-hidden="false" aria-label="">lock</mat-icon>
+              <span>Authentication</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a routerLink="login"
             ><mat-icon aria-hidden="false" aria-label="">login</mat-icon
             ><span>Login Page</span></a
           >
-          <a class="dropdown-item" routerLink="register"
+          <a routerLink="register"
             ><mat-icon aria-hidden="false" aria-label="">account_box</mat-icon
             ><span>Register Page</span></a
           >
-          <a class="dropdown-item" routerLink="forgot-password"
+          <a routerLink="forgot-password"
             ><mat-icon aria-hidden="false" aria-label="">lock_open</mat-icon
             ><span>Forgot Password</span></a
           >
-        </div>
+        </mat-expansion-panel>
 
-        <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <mat-icon aria-hidden="false" aria-label="">view_quilt</mat-icon>
-          <span>Page Layouts</span>
-          <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
-        </a>
-
-        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
+        <mat-expansion-panel class="col-12">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon aria-hidden="false" aria-label="">view_quilt</mat-icon>
+              <span>Page Layouts</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
           <a class="dropdown-item" routerLink="page-layouts/simple"
             ><mat-icon aria-hidden="false" aria-label="">view_array</mat-icon
             ><span>Simple</span></a
@@ -165,7 +165,7 @@
             ><mat-icon aria-hidden="false" aria-label="">view_array</mat-icon
             ><span>Card Tabbed</span></a
           >
-        </div>
+        </mat-expansion-panel>
 
         <a routerLink="coming-soon">
           <mat-icon aria-hidden="false" aria-label="">watch_later</mat-icon>
@@ -177,36 +177,84 @@
           <span>Blank</span>
         </a>
 
-        <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <mat-icon aria-hidden="false" aria-label="">map</mat-icon>
-          <span>Maps</span>
-          <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
-        </a>
-
-        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
+        <mat-expansion-panel class="col-12">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon aria-hidden="false" aria-label="">map</mat-icon>
+              <span>Maps</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
           <a class="dropdown-item" routerLink="maps/google-maps"
             ><mat-icon aria-hidden="false" aria-label="">place</mat-icon
             ><span>Google Maps</span></a
           >
-        </div>
+        </mat-expansion-panel>
 
         <a routerLink="icons">
           <mat-icon aria-hidden="false" aria-label="">star_border</mat-icon>
           <span>Material Icons</span>
         </a>
 
-        <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <mat-icon aria-hidden="false" aria-label="">view_headline</mat-icon>
-          <span>Multi-Level Menu</span>
-          <mat-icon aria-hidden="false" aria-label="">expand_more</mat-icon>
-        </a>
+        <mat-expansion-panel class="col-12">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon aria-hidden="false" aria-label=""
+                >view_headline</mat-icon
+              >
+              <span>Multi-Level Menu</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-expansion-panel class="col-12">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon aria-hidden="false" aria-label=""
+                  >view_headline</mat-icon
+                >
+                <span>Level 1</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
 
-        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#"
-            ><mat-icon aria-hidden="false" aria-label="">view_headline</mat-icon
-            ><span>Level1</span></a
-          >
-        </div>
+            <mat-expansion-panel class="col-12">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon aria-hidden="false" aria-label=""
+                    >view_headline</mat-icon
+                  >
+                  <span>Level 2</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <mat-expansion-panel class="col-12">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon aria-hidden="false" aria-label=""
+                      >view_headline</mat-icon
+                    >
+                    <span>Level 3</span>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <mat-expansion-panel class="col-12">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <mat-icon aria-hidden="false" aria-label=""
+                        >view_headline</mat-icon
+                      >
+                      <span>Level 4</span>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <a
+                    class="dropdown-item"
+                    routerLink="level1/level2/level3/level4/level5"
+                    ><mat-icon aria-hidden="false" aria-label=""
+                      >view_headline</mat-icon
+                    ><span>Level 5</span></a
+                  >
+                </mat-expansion-panel>
+              </mat-expansion-panel>
+            </mat-expansion-panel>
+          </mat-expansion-panel>
+        </mat-expansion-panel>
       </div>
     </div>
     <div class="col-10 right">

@@ -11,7 +11,7 @@
 
 .content {
   background: rgb(250, 250, 250);
-  padding: 50px 0 0 0;
+  padding: 60px 0 0 0;
 }
 
 .logo {
@@ -78,12 +78,22 @@
   text-decoration: none;
   display: block;
   padding: 10px 25px 5px 25px;
-  border-top-right-radius: 22px;
-  border-bottom-right-radius: 22px;
 }
 
-.menu a:hover {
+.menu>a:hover {
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
   background: rgb(33, 41, 57);
+}
+
+.menu mat-expansion-panel a:hover{
+  background: rgb(33, 41, 57);
+  color: white;
+}
+
+.menu mat-expansion-panel a {
+  text-align: left;
+
 }
 
 .menu a span {
@@ -91,7 +101,7 @@
   font-size: 16px;
 }
 
-.menu a > mat-icon {
+.menu a > mat-icon, .menu mat-expansion-panel mat-icon {
   font-size: 24px;
   margin-right: 20px;
 }
@@ -101,18 +111,23 @@
   margin: 0;
 }
 
-.dropdown-menu {
-  background: rgb(33, 41, 57);
+.menu mat-expansion-panel {
+  background: rgb(40, 49, 68);
+  text-align: center;
+  box-shadow: none;
 }
 
-.dropdown-menu mat-icon {
+.menu mat-expansion-panel a {
   color: rgb(144, 148, 156);
+  padding: 10px 10px 5px 25px;
+  border-radius: 10px;
+  margin: 0;
 }
 
-.dropdown-menu a:hover {
-  color: white;
-  background: rgb(35, 43, 60);
+.menu mat-panel-title, mat-expansion-panel-header {
+  color: white !important;
 }
+
 
 .toolbar {
   background: white;
@@ -212,3 +227,4 @@
 .sidebar::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
 }
+

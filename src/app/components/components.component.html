@@ -10,8 +10,8 @@
 </header>
 
 <div class="container-fluid row">
-  <div class="col-2 side-components">
-    <mat-list>
+  <div class="col-2">
+    <mat-list class="side-components">
       <mat-list-item>Components</mat-list-item>
       <a href="" *ngFor="let item of items"
         ><mat-list-item>{{ item }}</mat-list-item></a
@@ -28,7 +28,7 @@
       <div class="col-{{div.width}}">
       <h2>Preview</h2>
        <!-- <div [innerHTML]="div.tagContent | safehtml"></div> -->
-     <!--   {{div.tagContent}}
+      <!-- {{div.tagContent}}
        <button mat-icon-button matTooltip="Favorite this">
         <mat-icon>favorite</mat-icon>
       </button> -->

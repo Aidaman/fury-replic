@@ -19,7 +19,9 @@ header mat-icon {
 } 
 
 .side-components {
-  position: fixed;
+  position: sticky;
+  top: 60px;
+  padding: 0;
 }
 
 
