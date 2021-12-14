@@ -75,8 +75,6 @@ import { MatSelectModule } from '@angular/material/select';
     DashboardComponent,
     WriteMessageDialogComponent,
     FillerComponent,
-    
-
   ],
   imports: [
     BrowserModule,

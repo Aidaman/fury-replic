@@ -27,49 +27,49 @@ export class ChatComponent implements OnInit {
   public contacts: IContact[] = [
     {
       index: 1,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Kakyoin Noriaki`,
       status: `Online`,
     },
     {
       index: 2,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Joseph Joestar`,
       status: `Online`,
     },
     {
       index: 3,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Giorno Giovanna`,
       status: `Online`,
     },
     {
       index: 4,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Bruno Bucciarati`,
       status: `Online`,
     },
     {
       index: 5,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `SpeeeeeeeeeeeeeeeeedwaGOOON`,
       status: `Online`,
     },
     {
       index: 6,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `DЫO`,
       status: `Online`,
     },
     {
       index: 7,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Higashikata Josuke`,
       status: `Online`,
     },
     {
       index: 8,
-      imagePath: `../../assets/User`,
+      imagePath: `../../assets/Users/User`,
       name: `Nijimura Okuyasu`,
       status: `Online`,
     },
@@ -88,7 +88,7 @@ export class ChatComponent implements OnInit {
       index: 2,
       viewValue: 'self-message message',
       text: 'Мне 33 года',
-      avatarPath: '../../assets/UserAvatar.jpg',
+      avatarPath: '../../assets/Users/UserAvatar.jpg',
     },
     {
       index: 3,
@@ -100,7 +100,7 @@ export class ChatComponent implements OnInit {
       index: 4,
       viewValue: 'self-message message',
       text: 'Я не женат. Я работаю в универмаге Kame Yu и прихожу домой не позднее 8 вечера',
-      avatarPath: '../../assets/UserAvatar.jpg',
+      avatarPath: '../../assets/Users/UserAvatar.jpg',
     },
   ]
 
@@ -125,7 +125,7 @@ export class ChatComponent implements OnInit {
         index: this.messages.length+1,
         viewValue: "self-message message",
         text: this.input.nativeElement.value,
-        avatarPath: '../../assets/UserAvatar.jpg',
+        avatarPath: '../../assets/Users/UserAvatar.jpg',
       });
       this.input.nativeElement.value = '';
     }
