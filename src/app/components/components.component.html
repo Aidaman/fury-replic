@@ -22,78 +22,6 @@
   <div class="col"></div>
 
   <div class="col-9">
-
-
-    <div class="col-12 row block" *ngFor="let div of divs">
-      <div class="col-{{div.width}}">
-      <h2>Preview</h2>
-       <!-- <div [innerHTML]="div.tagContent | safehtml"></div> -->
-      <!-- {{div.tagContent}}
-       <button mat-icon-button matTooltip="Favorite this">
-        <mat-icon>favorite</mat-icon>
-      </button> -->
-      </div>
-      <div class="col">
-        <h1>{{div.header}}</h1>
-        <span class="gray">&lt;{{div.tag}}&gt;</span>
-
-        <mat-tab-group>
-          <mat-tab label="DESCRIPTION">
-            <div class="description">
-              <p>
-                {{div.description}}
-              </p>
-            </div>
-          </mat-tab>
-          <mat-tab label="SOURCE CODE">
-            <code>
-              <p>
-                {{div.sourceCode}}
-              </p>
-            </code>
-          </mat-tab>
-        </mat-tab-group>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="col-12 row block">
       <div class="col-4">
         <h2>Preview</h2>
@@ -475,61 +403,54 @@
     <div class="col-12 row block">
       <div class="col-3">
         <h2>Preview</h2>
-        <mat-checkbox>Checkbox</mat-checkbox><br>
-        <mat-checkbox color="primary" [checked]="true">Primary</mat-checkbox><br>
-        <mat-checkbox color="accent" [checked]="true">Accent</mat-checkbox><br>
-        <mat-checkbox color="warn" [checked]="true">Warn</mat-checkbox><br>
-        <mat-checkbox disabled [checked]="true">Disabled</mat-checkbox><br>
-        <mat-checkbox [indeterminate]="true">Indeterminate</mat-checkbox><br>
+        <mat-checkbox>Checkbox</mat-checkbox><br />
+        <mat-checkbox color="primary" [checked]="true">Primary</mat-checkbox
+        ><br />
+        <mat-checkbox color="accent" [checked]="true">Accent</mat-checkbox
+        ><br />
+        <mat-checkbox color="warn" [checked]="true">Warn</mat-checkbox><br />
+        <mat-checkbox disabled [checked]="true">Disabled</mat-checkbox><br />
+        <mat-checkbox [indeterminate]="true">Indeterminate</mat-checkbox><br />
       </div>
       <div class="col">
-        <h1>Autocomplete</h1>
-        <span class="gray">&lt;mat-autocomplete&gt;</span>
+        <h1>Checkbox</h1>
+        <span class="gray">&lt;mat-checkbox&gt;</span>
 
         <mat-tab-group>
           <mat-tab label="DESCRIPTION">
             <div class="description">
               <p>
-                Input text can be used with autocomplete to help users who have
-                limited literacy or who write in a foreign language.
-              </p>
-
-              <p>
-                For example, autocomplete can: <br />
-                Suggest input as it’s typed (refreshing suggestions with each
-                keystroke)<br />
-                Fill a field with default input text<br />
-                Pressing the return button accepts the current autocomplete
-                suggestion
+                Checkboxes allow the user to select multiple options from a set.
+                <br />
+                If you have multiple options appearing in a list, you can
+                preserve space by using checkboxes instead of on/off switches.
+                <br />
+                If you have a single option, avoid using a checkbox and use an
+                on/off switch instead.
               </p>
             </div>
           </mat-tab>
           <mat-tab label="SOURCE CODE">
             <code>
               <p>
-                &lt;<span class="yellow">mat-input-container</span>&gt;<br />
-                &lt;<span class="yellow">mat-label</span>&gt;State&lt;<span
+                <span class="yellow">&lt;mat-checkbox</span>&gt;Checkbox<span
                   class="yellow"
-                  >/mat-label</span
+                  >&lt;/mat-checkbox</span
                 >&gt;<br />
-                &lt;<span class="yellow">input</span> type=<span class="green"
-                  >"text"</span
-                >
-                matInput [matAutocomplete]=<span class="green">"auto"</span>
-                [formControl]=<span class="green">"stateCtrl"</span>&gt;<br />
-                &lt;<span class="yellow">mat-autocomplete</span> #auto=<span
-                  class="green"
-                  >"matAutocomplete"</span
-                >&gt;<br />
-                &lt;<span class="yellow">mat-option</span> *ngFor=<span
-                  class="green"
-                  >"let option of options"</span
-                >
-                [value]=<span class="green">"option"</span>&gt;<br />
-                ｛｛ option ｝｝<br />
-                &lt;<span class="yellow">/mat-option</span>&gt;<br />
-                &lt;<span class="yellow">/mat-autocomplete</span>&gt;<br />
-                &lt;<span class="yellow">/mat-input-container</span>&gt;<br />
+                <span class="yellow"
+                  >&lt;mat-checkbox</span> color=<span class="green">"primary"</span> [checked]=<span class="green">"true"</span>&gt;Primary<span class="yellow">&lt;/mat-checkbox</span>&gt;<br />
+                <span class="yellow"
+                  >&lt;mat-checkbox</span> color=<span class="green">"accent"</span> [checked]=<span class="green">"true"</span>&gt;Accent<span class="yellow">&lt;/mat-checkbox </span>&gt;<br>
+                <span class="yellow"
+                  >&lt;mat-checkbox color=<span class="green">"warn"</span> [checked]=<span class="green">"true"</span></span
+                >&gt;Warn<span class="yellow">&lt;/mat-checkbox</span>&gt;
+                <span class="yellow"
+                  >&lt;mat-checkbox</span> disabled [checked]=<span class="green">"true"</span>
+                &gt;Disabled<span class="yellow">&lt;/mat-checkbox</span>&gt;
+                <span class="yellow"
+                  >&lt;mat-checkbox [indeterminate]=<span class="green">"true"</span> </span
+                >&gt;Indeterminate<span class="yellow">&lt;/mat-checkbox </span
+                >&gt;
               </p>
             </code>
           </mat-tab>
