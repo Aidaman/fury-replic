@@ -32,6 +32,12 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,6 +96,12 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatSliderModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
