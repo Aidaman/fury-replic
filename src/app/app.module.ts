@@ -19,6 +19,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { Safehtml } from './safehtml.pipe';
 
@@ -44,6 +53,8 @@ import { GoogleMapsComponent } from './maps/google-maps/google-maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Level5Component } from './level1/level2/level3/level4/level5/level5.component';
+import { ExampleDialogComponent } from './components/dialog/example-dialog/example-dialog.component';
+import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar/example-snackbar.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +82,8 @@ import { Level5Component } from './level1/level2/level3/level4/level5/level5.com
     DashboardComponent,
     Safehtml,
     Level5Component,
+    ExampleDialogComponent,
+    ExampleSnackbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,6 +104,15 @@ import { Level5Component } from './level1/level2/level3/level4/level5/level5.com
     MatCheckboxModule,
     MatTooltipModule,
     MatExpansionModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },

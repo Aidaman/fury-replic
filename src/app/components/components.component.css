@@ -99,10 +99,22 @@ code > p {
   margin: 5px 0;
 }
 
-.buttons {
+.center {
   text-align: center;
 }
 
 .right {
   padding: 0;
+}
+
+.list {
+  background: white;
+}
+
+.radio {
+  margin: 2.5px 0;
+}
+
+.slide-toggle {
+  margin: 5px 35px;
 }
