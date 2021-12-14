@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RegistrationFormComponent } from './forms/registration-form/registration-form.component';
+
 
 import { MatPseudoCheckboxModule } from '@angular/material/core';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule, MatFormField, MatFormFieldControl } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
@@ -33,6 +33,21 @@ import { BlankComponent } from './blank/blank.component';
 import { GoogleMapsComponent } from './maps/google-maps/google-maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { WriteMessageDialogComponent } from './apps/inbox/write-message-dialog/write-message-dialog.component';
+
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { FillerComponent } from './page-layouts/filler/filler.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatCardModule} from "@angular/material/card";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatInputModule} from "@angular/material/input";
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -58,6 +73,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     GoogleMapsComponent,
     IconsComponent,
     DashboardComponent,
+    WriteMessageDialogComponent,
+    FillerComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -69,6 +88,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatPseudoCheckboxModule,
     MatSidenavModule,
     MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatTabsModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatDialogModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSelectModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },

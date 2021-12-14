@@ -1,0 +1,59 @@
+.container-fluid{
+    background-color: #DDD;
+    padding: 11% 12%;
+    overflow: hidden;
+  }
+  .row{
+    margin: 0;
+  }
+  .col-4{
+    padding: 0;
+    padding: 0;
+  }
+  .form {
+    background-color: #fff;
+  
+    text-align: center;
+    border-radius: 1rem;
+    padding-bottom: 3rem;
+  }
+  .icon{
+    background-color: #673ab7;
+    background-image: url("/assets/Angular_full_color_logo.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  
+    padding: 5rem 0;
+  
+    border-radius: 1rem 1rem 0 0;
+  }
+  form{
+    margin-bottom: 2rem;
+  }
+  p{
+    margin: 0
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+  
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+  mat-form-field, button{
+    width: 100%;
+  }
+  .auxilliary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-size: 12px;
+  
+    margin-bottom: 1rem;
+  }
+  

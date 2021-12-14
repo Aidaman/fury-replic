@@ -1,0 +1,89 @@
+<div class="container">
+    <button mat-flat-button color="warn" class="full-width margin-bottom-2" (click)="send()">Send</button>
+    <mat-form-field class="full-width" appearance="fill">
+        <input matInput placeholder="Sender" type="text" required disabled value="Joparo666@Ora.com">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="My daughter" type="text" required>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Adresse</mat-label>
+        <mat-select>
+            <mat-option value="../../../assets/Users/User1.jpg">Kakyoin Noriaki</mat-option>
+            <mat-option value="../../../assets/Users/User2.jpg">Joseph Joestar</mat-option>
+            <mat-option value="../../../assets/Users/User3.jpg">Giorno Giovanna</mat-option>
+            <mat-option value="../../../assets/Users/User4.jpg">Bruno Bucciarati</mat-option>
+            <mat-option value="../../../assets/Users/User5.jpg">Speedwagon</mat-option>
+            <mat-option value="../../../assets/Users/User6.jpg">Dio Brando</mat-option>
+            <mat-option value="../../../assets/Users/User7.jpg">Higashikata Josuke</mat-option>
+            <mat-option value="../../../assets/Users/User8.jpg">Nijimura Okuyasu</mat-option>
+            <mat-option value="../../../assets/Users/User9.jpg">Hirose Koichi</mat-option>
+            <mat-option value="../../../assets/Users/User10.jpg">Caeser Zeppeli</mat-option>
+            <mat-option value="../../../assets/Users/User11.jpg">Jolyne Kujo</mat-option>
+            <mat-option value="../../../assets/Users/User12.jpg">Enrico Pucci</mat-option>
+            <mat-option value="../../../assets/Users/User13.jpg">Leone Abbacchio</mat-option>
+            <mat-option value="../../../assets/Users/User14.jpg">Rudolf von Stroheim</mat-option>
+          </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select>
+            <mat-option value="Primary">Primary</mat-option>
+            <mat-option value="Sociall">Sociall</mat-option>
+            <mat-option value="Promotion">Promotion</mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    <!-- <div class="textArea">
+      <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+      <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+      <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+      <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+
+      <link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+      <script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script>
+      <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />
+      <div id="toolbar">
+        <button class="ql-bold">Bold</button>
+        <button class="ql-italic">Italic</button>
+      </div>
+      <div id="editor">
+        <p>Hello World!</p>
+      </div>
+      <script>
+        var container = document.getElementById('editor');
+        var options = {
+        debug: 'info',
+        modules: {
+        toolbar: '#toolbar'
+        },
+        placeholder: 'Compose an epic...',
+        readOnly: true,
+        theme: 'snow'
+        };
+        var editor = new Quill('#editor', options);
+      </script>
+    </div> -->
+    <div class="fulltext">
+        <!-- <div class="icons">
+            <mat-icon>format_bold</mat-icon>
+            <mat-icon>format_italic</mat-icon>
+            <mat-icon>format_underlined</mat-icon>
+            <mat-icon>format_croslined</mat-icon>
+
+            <mat-icon>format_quote</mat-icon>
+            <mat-icon>code</mat-icon>
+
+            <mat-icon>format_list_bulleted</mat-icon>
+            <mat-icon>format_list_numbered</mat-icon>
+
+        </div> -->
+        <mat-form-field class="full-width" appearance="fill">
+    
+            <mat-label>Message</mat-label>
+            <textarea matInput placeholder="I'm worry about her"></textarea>
+        </mat-form-field>
+    </div>
+</div>

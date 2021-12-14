@@ -1,1 +1,79 @@
-<p>primary works!</p>
+<div class="content">
+    <div class="header-search">
+      <div class="inbox-header row">
+        <div class="header col-2">
+          <mat-icon class="mail-icon">mail</mat-icon>
+          <h1>Inbox</h1>
+        </div>
+        <div class="search-field col-10">
+          <mat-form-field class="search" appearance="fill">
+            <mat-label>Search...</mat-label>
+            <input matInput [type]="'text'">
+            <button mat-icon-button matPrefix>
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  
+    <div class="bottom-content row">
+      <div class="col-2 auxilliary">
+        <button mat-flat-button (click)="composeMessage()" class="compose">
+          <mat-icon>mode_edit</mat-icon>
+          <span>Compose</span>
+        </button>
+        <span class="span-inbox">Inbox</span>
+        <button (click)="switchActive(directory)" mat-flat-button class="{{directory.viewValue}}" *ngFor="let directory of Sections[0]">
+          <mat-icon>{{directory.iconID}}</mat-icon>
+          <span>{{directory.text}}</span></button>
+        <mat-divider></mat-divider>
+        <button (click)="switchActive(directory)" mat-flat-button class="{{directory.viewValue}}" *ngFor="let directory of Sections[1]">
+          <mat-icon>{{directory.iconID}}</mat-icon>
+          <span>{{directory.text}}</span></button>
+        <mat-divider></mat-divider>
+        <button (click)="switchActive(directory)" mat-flat-button class="{{directory.viewValue}}" *ngFor="let directory of Sections[2]">
+          <mat-icon>{{directory.iconID}}</mat-icon>
+          <span>{{directory.text}}</span></button>
+      </div>
+      <div class="col-10">
+        <span *ngIf="isMessagesClosed == false then thenBlock else elseBlock"></span>
+        <ng-template  #thenBlock>
+          <mat-card class="mail-container">
+            <mat-checkbox color="primary" class="mail-checkbox"></mat-checkbox>
+            <div class="messages">
+              <div (click)="showMessage(adresse)"  class="message" *ngFor="let adresse of chosenSection.chats">
+                <mat-checkbox [checked]="adresse.checkBoxStatus" color="primary" class="message-checkbox"></mat-checkbox>
+                <mat-icon (click)="switchStar(adresse)" [color]="adresse.starred? 'warn' : 'black'" class="star-icon">{{adresse.starred? 'star' : 'star_border'}}</mat-icon>
+                <img [src]="adresse.image" alt="" class="round-avatar">
+                <div class="who-when">
+                  <div class="name">{{adresse.fullname}}</div>
+                  <div class="time">{{adresse.when}}</div>
+                </div>
+                <div class="shorted-text">{{adresse.shorterText}}</div>
+                <!-- <div *ngIf="adresse.viewValue == 'fulltext' then thenBlock else elseBlock"></div>
+                <ng-template class="fulltext" #thenBlock>>{{adresse.fulltext}}</ng-template>
+                <ng-template class="shorted-text" #elseBlock>{{adresse.shorterText}}</ng-template> -->
+              </div>
+            </div>
+          </mat-card>
+        </ng-template>
+        <ng-template #elseBlock>
+          <mat-card class="mail-container chosen">
+              <div class="adresse-data">
+                <mat-icon (click)="switchStar(chosenChat)" [color]="chosenChat.starred? 'warn' : 'black'" class="star-icon">{{chosenChat.starred? 'star' : 'star_border'}}</mat-icon>
+                <img [src]="chosenChat.image" alt="" class="round-avatar">
+                <div class="who-when">
+                  <div class="name">{{chosenChat.fullname}}</div>
+                  <div class="time">{{chosenChat.when}}</div>
+                </div>
+              </div>
+              <div class="fulltext">
+                {{chosenChat.fulltext}}
+              </div>
+          </mat-card>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  
