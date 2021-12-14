@@ -1,1 +1,70 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="grid-2x2">
+        <mat-card class="total-sales top-grid-element">
+            <div class="flex-row header-flex-row">
+                <div class="flex-col">
+                    <mat-card-title class="color-white">Total Sales</mat-card-title>
+                    <mat-card-subtitle class="color-white"><mat-icon>keyboard_arrow_up</mat-icon> 16.3% compared to last month</mat-card-subtitle>
+                </div>
+                <div class="flex-row">
+                    <button mat-icon-button>
+                        <mat-icon class="color-white">refresh</mat-icon>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+                        <mat-icon class="color-white">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menuTotalSales="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>settings</mat-icon>
+                          <span>Settings</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>more</mat-icon>
+                          <span>More info</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>remove_circle</mat-icon>
+                          <span>Remove widget</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <mat-card-content>
+                <app-total-sales-diagram></app-total-sales-diagram>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="visits top-grid-element">
+
+        </mat-card>
+        <mat-card class="total-clicks top-grid-element">
+
+        </mat-card>
+        <mat-card class="coversions top-grid-element">
+
+        </mat-card>
+    </div>
+    <mat-card class="graffic">
+
+    </mat-card>
+    <div class="grid-2x2 merge-rows-2">
+
+    </div>
+    <div class="circle-diagram">
+
+    </div>
+    <div class="topCategories-shibaInu">
+
+    </div>
+    <div class="coming-soon">
+
+    </div>
+    <div class="recentsales-table">
+
+    </div>
+    <div class="another-diagramm">
+
+    </div>
+    <div class="maps">
+        <app-google-maps></app-google-maps>
+    </div>
+</div>

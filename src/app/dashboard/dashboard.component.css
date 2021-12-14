@@ -1,0 +1,40 @@
+.container{
+
+}
+.grid-2x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.total-sales{
+    background-color: purple;
+    
+}
+.visits{
+    background-color: lightskyblue;
+}
+.total-clicks{
+    background-color: forestgreen;
+}
+.coversions{
+    background-color: darkcyan;
+}
+.top-grid-element{
+    border-radius: 12px;
+    
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.header-flex-row{
+    justify-content: space-between;
+}
+.color-white{
+    color: #FFFFFF;
+}
