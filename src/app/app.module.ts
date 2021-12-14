@@ -9,11 +9,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { WysiwygEditorComponent } from './wysiwyg-editor/wysiwyg-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DragDropComponent
+    DragDropComponent,
+    WysiwygEditorComponent
   ],
   imports: [
     BrowserModule,

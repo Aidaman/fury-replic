@@ -1,0 +1,22 @@
+<link  href = "https://cdn.quilljs.com/1.0.0/quill.snow.css" rel = "stylesheet "/>
+
+<div  id = "toolbar" > 
+  <button  class = "ql-bold"> Полужирный </button > 
+  <button  class = "ql-italic"> Курсив </button > 
+</div >
+
+
+<div id = "editor" > 
+  <p> Hello World! </p > 
+</div>
+
+
+<script src = "https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
+
+<script> 
+  var editor  =  new  Quill ('#editor',  { 
+    modules : { toolbar : '#toolbar'} , 
+    theme : 'snow', 
+  } ) ; 
+</script>

@@ -32,6 +32,6 @@
       [cdkDropListConnectedTo]="[todoList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <div class="example-box" *ngFor="let item of done" cdkDrag>✓ {{item}}</div>
     </div>
   </div>
