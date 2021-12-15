@@ -1,0 +1,85 @@
+mat-card{
+    margin-top: 1rem;
+    padding: 0;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    width: 120px;
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+.choice:hover{
+    background-color: #aaaaaa30;
+}
+.Name{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+}
+.Compared{
+    font-size: 12px;
+}
+.green{
+    color: #b1b55c;
+}
+.red{
+    color: #a8296b
+}
+.active{
+    background-color: #aaaaaa30;
+    border-radius: 6px;
+}
+.active .Name{
+    font-size: 14px;
+    font-weight: 700;
+}
+.full-width{
+    width: 100%;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+mat-card-content{
+    border-bottom: rgba(0, 0, 0, 0.25) 1px solid;
+}
+.flex-row-space-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.flat-button{
+    border: none;
+    
+    color: #605aa2;
+    font-weight: 500;
+    text-transform:uppercase;
+
+    background-color: transparent;
+    padding: 1rem;
+}
+.flat-button:hover{
+    background-color: #AAAAAA4d;
+}

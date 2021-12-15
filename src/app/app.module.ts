@@ -35,19 +35,25 @@ import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WriteMessageDialogComponent } from './apps/inbox/write-message-dialog/write-message-dialog.component';
 
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ReactiveFormsModule} from "@angular/forms";
+import { MatCheckboxModule} from "@angular/material/checkbox";
 import { FillerComponent } from './page-layouts/filler/filler.component';
-import {MatTabsModule} from "@angular/material/tabs";
-import {MatCardModule} from "@angular/material/card";
-import {MatMenuModule} from "@angular/material/menu";
-import {MatDividerModule} from "@angular/material/divider";
-import {MatInputModule} from "@angular/material/input";
-import {MatTableModule} from "@angular/material/table";
-import {MatSortModule} from "@angular/material/sort";
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { MatTabsModule} from "@angular/material/tabs";
+import { MatCardModule} from "@angular/material/card";
+import { MatMenuModule} from "@angular/material/menu";
+import { MatDividerModule} from "@angular/material/divider";
+import { MatInputModule} from "@angular/material/input";
+import { MatTableModule} from "@angular/material/table";
+import { MatSortModule} from "@angular/material/sort";
+import { MatPaginatorModule} from "@angular/material/paginator";
+import { MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
+import { TotalSalesComponent } from './dashboard/total-sales/total-sales.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { VisitsComponent } from './dashboard/visits/visits.component';
+import { TotalClicksComponent } from './dashboard/total-clicks/total-clicks.component';
+import { ConversionsComponent } from './dashboard/conversions/conversions.component';
+import { SwitchingLineChardDiagramComponent } from './dashboard/switching-line-chard-diagram/switching-line-chard-diagram.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +81,11 @@ import { MatSelectModule } from '@angular/material/select';
     DashboardComponent,
     WriteMessageDialogComponent,
     FillerComponent,
+    TotalSalesComponent,
+    VisitsComponent,
+    TotalClicksComponent,
+    ConversionsComponent,
+    SwitchingLineChardDiagramComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,6 +110,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
+    NgxChartsModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },

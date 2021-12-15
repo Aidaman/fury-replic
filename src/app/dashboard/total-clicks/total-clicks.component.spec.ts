@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GrafficComponent } from './graffic.component';
+import { TotalClicksComponent } from './total-clicks.component';
 
-describe('GrafficComponent', () => {
-  let component: GrafficComponent;
-  let fixture: ComponentFixture<GrafficComponent>;
+describe('TotalClicksComponent', () => {
+  let component: TotalClicksComponent;
+  let fixture: ComponentFixture<TotalClicksComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GrafficComponent ]
+      declarations: [ TotalClicksComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrafficComponent);
+    fixture = TestBed.createComponent(TotalClicksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

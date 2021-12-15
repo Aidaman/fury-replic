@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { multi } from './Data';
+import * as shape from 'd3-shape'
 
 @Component({
-  selector: 'app-conversions-diagram',
-  templateUrl: './conversions.component.html',
-  styleUrls: ['./conversions.component.css']
+  selector: 'app-total-clicks-diagram',
+  templateUrl: './total-clicks.component.html',
+  styleUrls: ['./total-clicks.component.css']
 })
-export class ConversionsComponent implements OnInit {
-
+export class TotalClicksComponent implements OnInit {
 
   ngOnInit(): void {
   }
@@ -30,11 +30,12 @@ export class ConversionsComponent implements OnInit {
   autoScale: boolean = true;
   showRefLabels: boolean = true;
   colorScheme:any = {
-    domain: ['#758230']
+    domain: ['#d5e2ed']
   };
+  curve: any = shape.curveBasis;
 
   constructor() {
-    Object.assign(this, { multi });
+    Object.assign(this, { multi }); 
   }
 
   onSelect(data: any): void {

@@ -108,7 +108,7 @@
     height: 64px;
     width: 100%;
   
-    border-top: #333 solid 1px;
+    border-top: rgba(153, 153, 153, 0.5) solid 1px;
     /* border-bottom: #333333D5 solid 1px; */
     /*border-radius: .5rem;*/
   
