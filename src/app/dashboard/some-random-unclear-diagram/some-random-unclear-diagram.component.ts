@@ -9,8 +9,8 @@ import { data } from './data';
 export class SomeRandomUnclearDiagramComponent implements OnInit {
   public data: any[] = data;
   public height: number = 200;
-  public width: number = 100;
-  public view: [number, number] = [0, this.height];
+  public width: number = 1200;
+  public view: [number, number] = [this.width, this.height];
 
   // options
   public legend: boolean = false;

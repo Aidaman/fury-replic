@@ -59,6 +59,7 @@ import { SalesSummaryDiagramComponent } from './dashboard/sales-summary-diagram/
 import { CircleDiagramComponent } from './dashboard/circle-diagram/circle-diagram.component';
 import { RecentSalesTableComponent } from './dashboard/recent-sales-table/recent-sales-table.component';
 import { SomeRandomUnclearDiagramComponent } from './dashboard/some-random-unclear-diagram/some-random-unclear-diagram.component';
+import { TopCategoriesDiagramComponent } from './dashboard/top-categories-diagram/top-categories-diagram.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { SomeRandomUnclearDiagramComponent } from './dashboard/some-random-uncle
     CircleDiagramComponent,
     RecentSalesTableComponent,
     SomeRandomUnclearDiagramComponent,
+    TopCategoriesDiagramComponent,
   ],
   imports: [
     BrowserModule,

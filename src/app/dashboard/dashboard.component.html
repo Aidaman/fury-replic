@@ -158,24 +158,43 @@
             <app-circle-diagram></app-circle-diagram>
         </mat-card>
     </div>
-    <div class="topCategories-shibaInu">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, neque.</p>
+    <div class="topCategories-shibaInu grid-2x1">
+        <mat-card>
+            <app-top-categories-diagram></app-top-categories-diagram>
+        </mat-card>
+        <mat-card class="Shiba-Inu">
+            <div class="flex-row">
+                <img src="../../assets/Users/UserAvatar.jpg" alt="" class="round-avatar">
+                <div class="flex-column centre-it">
+                    <mat-card-title><p>Shiba Inu</p></mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </div>
+            </div>
+            <mat-card-content>
+                <img class="dog-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                </p>
+                <div class="flex-row-end">
+                    <button class="dog-button" mat-flat-button>like</button>
+                    <button class="dog-button" mat-flat-button>share</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
     <div class="coming-soon full-width">
         <h2>6 more widgets available</h2>
-        <button color="primary" mat-flat-button class="white-text">coming soon</button>
+        <button routerLink="/coming-soon" color="primary" mat-flat-button class="white-text">coming soon</button>
     </div>
     <div class="recentsales-table">
         <mat-card>
             <mat-card-title>Recent Sales</mat-card-title>
             <mat-card-subtitle>See who bought what in realtime</mat-card-subtitle>
             <app-recent-sales-table></app-recent-sales-table>
+            <app-some-random-unclear-diagram></app-some-random-unclear-diagram>
         </mat-card>
     </div>
-    <div class="another-diagramm">
-        <app-some-random-unclear-diagram></app-some-random-unclear-diagram>
-    </div>
-    <div class="maps">
+    <div class="maps full-width">
         <app-google-maps></app-google-maps>
     </div>
 </div>

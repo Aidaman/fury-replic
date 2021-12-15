@@ -68,7 +68,7 @@ const products: IProduct[] =[
   templateUrl: './recent-sales-table.component.html',
   styleUrls: ['./recent-sales-table.component.css']
 })
-export class RecentSalesTableComponent implements OnInit, AfterViewInit {
+export class RecentSalesTableComponent implements AfterViewInit {
   public displayedColumns: string[] = ['Product', 'Price', 'Timeago'];
   public dataSource = new MatTableDataSource<IProduct>(products);
 
@@ -76,9 +76,7 @@ export class RecentSalesTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private _liveAnnouncer: LiveAnnouncer) {
-
-  }
-  ngOnInit(): void {
+    
   }
 
   ngAfterViewInit() {

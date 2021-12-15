@@ -9,12 +9,16 @@ export interface IChartData {
   export var data: IChartData[] = createData();
 
   function createData() : IChartData[]{
-    let tmpData = new Array();
+    let tmpArr = new Array();
     for (let i = 0; i < 50; i++) {
-        tmpData.push({
+        tmpArr.push({
             name: i+1,
             value: Math.round(Math.random() * (100 - 10) + 10),
         })        
     }
+    let tmpData = [{
+      name: " ",
+      series: tmpArr
+    }];
     return tmpData;
   }
