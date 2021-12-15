@@ -1,1 +1,1303 @@
-<p>components works!</p>
+<header>
+  <h2>Components</h2>
+  <h4>
+    <span>Home</span>
+    <mat-icon aria-hidden="false" aria-label="All-In-One Table"
+      >navigate_next</mat-icon
+    >
+    Components
+  </h4>
+</header>
+
+<div class="container-fluid row">
+  <div class="col-2">
+    <mat-list class="side-components">
+      <mat-list-item>Components</mat-list-item>
+      <a href="" *ngFor="let item of items"
+        ><mat-list-item>{{ item }}</mat-list-item></a
+      >
+    </mat-list>
+  </div>
+
+  <div class="col"></div>
+
+  <div class="col-9">
+    <div class="col-12 row block">
+      <div class="col-4">
+        <h2>Preview</h2>
+
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label
+              >State
+              <mat-icon role="img" aria-hidden="true" data-mat-icon-type="font"
+                >arrow_drop_down</mat-icon
+              ></mat-label
+            >
+            <input
+              matInput
+              aria-label="State"
+              [matAutocomplete]="auto"
+              [formControl]="stateCtrl"
+            />
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option
+                *ngFor="let state of filteredStates | async"
+                [value]="state.name"
+              >
+                <img
+                  class="example-option-img"
+                  aria-hidden
+                  [src]="state.flag"
+                  height="25"
+                />
+                <span>{{ state.name }}</span> |
+                <small>Population: {{ state.population }}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="col">
+        <h1>Autocomplete</h1>
+        <span class="gray">&lt;mat-autocomplete&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Input text can be used with autocomplete to help users who have
+                limited literacy or who write in a foreign language.
+              </p>
+
+              <p>
+                For example, autocomplete can: <br />
+                Suggest input as it’s typed (refreshing suggestions with each
+                keystroke)<br />
+                Fill a field with default input text<br />
+                Pressing the return button accepts the current autocomplete
+                suggestion
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-input-container</span>&gt;<br />
+                &lt;<span class="yellow">mat-label</span>&gt;State&lt;<span
+                  class="yellow"
+                  >/mat-label</span
+                >&gt;<br />
+                &lt;<span class="yellow">input</span> type=<span class="green"
+                  >"text"</span
+                >
+                matInput [matAutocomplete]=<span class="green">"auto"</span>
+                [formControl]=<span class="green">"stateCtrl"</span>&gt;<br />
+                &lt;<span class="yellow">mat-autocomplete</span> #auto=<span
+                  class="green"
+                  >"matAutocomplete"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-option</span> *ngFor=<span
+                  class="green"
+                  >"let option of options"</span
+                >
+                [value]=<span class="green">"option"</span>&gt;<br />
+                ｛｛ option ｝｝<br />
+                &lt;<span class="yellow">/mat-option</span>&gt;<br />
+                &lt;<span class="yellow">/mat-autocomplete</span>&gt;<br />
+                &lt;<span class="yellow">/mat-input-container</span>&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-5">
+        <h2>Preview</h2>
+        <div class="center">
+          <button mat-button class="col-6">Button</button>
+          <button mat-raised-button class="col-6">Button</button>
+          <button mat-button color="primary" class="col-6">Primary</button>
+          <button mat-raised-button color="primary" class="col-6">
+            Primary
+          </button>
+          <button mat-button color="accent" class="col-6">Accent</button>
+          <button mat-raised-button color="accent" class="col-6">Accent</button>
+          <button mat-button color="warn" class="col-6">Warn</button>
+          <button mat-raised-button color="warn" class="col-6">Warn</button>
+          <button mat-button disabled="true" class="col-6">Disabled</button>
+          <button mat-raised-button disabled="true" class="col-6">
+            Disabled
+          </button>
+          <!-- <button mat-icon-button class="col-3"><mat-icon>menu</mat-icon></button> -->
+
+          <button mat-icon-button color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-icon-button color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-icon-button disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+
+          <button mat-mini-fab color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-mini-fab color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-mini-fab color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-mini-fab disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+
+          <button mat-fab color="primary">
+            <mat-icon>grade</mat-icon>
+          </button>
+          <button mat-fab color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-fab color="warn">
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-fab disabled="true">
+            <mat-icon>lock</mat-icon>
+          </button>
+          <br />
+          <mat-button-toggle-group>
+            <mat-button-toggle value="left"
+              ><mat-icon>format_align_left</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="center"
+              ><mat-icon>format_align_center</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="right"
+              ><mat-icon>format_align_right</mat-icon></mat-button-toggle
+            >
+            <mat-button-toggle value="justify"
+              ><mat-icon>format_align_justify</mat-icon></mat-button-toggle
+            >
+          </mat-button-toggle-group>
+          <mat-button-toggle-group multiple>
+            <mat-button-toggle>Flour</mat-button-toggle>
+            <mat-button-toggle>Eggs</mat-button-toggle>
+            <mat-button-toggle>Sugar</mat-button-toggle>
+            <mat-button-toggle>Milk</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+      <div class="col">
+        <h1>Buttons</h1>
+        <span class="gray">&lt;mat-button&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Material buttons trigger an ink reaction on press. They may
+                display text, imagery, or both. Flat buttons and raised buttons
+                are the most commonly used types.
+              </p>
+
+              <p>
+                <b>Flat buttons:</b> Flat buttons are text-only buttons. They
+                may be used in dialogs, toolbars, or inline. They do not lift,
+                but fill with color on press.
+              </p>
+
+              <p>
+                <b>Raised buttons:</b> Raised buttons are rectangular-shaped
+                buttons. They may be used inline. They lift and display ink
+                reactions on press.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;button mat-button&gt;Button&lt;/button&gt;<br />
+                &lt;button mat-button
+                color="primary"&gt;Primary&lt;/button&gt;<br />
+                &lt;button mat-button color="accent"&gt;Accent&lt;/button&gt;<br />
+                &lt;button mat-button color="warn"&gt;Warn&lt;/button&gt;<br />
+                &lt;button mat-button
+                disabled="true"&gt;Disabled&lt;/button&gt;&lt;button
+                mat-raised-button&gt;Button&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="primary"&gt;Primary&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="accent"&gt;Accent&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                color="warn"&gt;Warn&lt;/button&gt;<br />
+                &lt;button mat-raised-button
+                disabled="true"&gt;Disabled&lt;/button&gt;&lt;button
+                mat-icon-button&gt;&lt;mat-icon&gt;menu&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="primary"&gt;&lt;mat-icon&gt;grade&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="accent"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-icon-button
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;&lt;button
+                mat-fab
+                color="primary"&gt;&lt;mat-icon&gt;grade&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                color="accent"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-fab
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="primary"&gt;&lt;mat-icon&gt;favorite&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="accent"&gt;&lt;mat-icon&gt;thumb_up&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                color="warn"&gt;&lt;mat-icon&gt;build&lt;/mat-icon&gt;&lt;/button&gt;<br />
+                &lt;button mat-mini-fab
+                disabled="true"&gt;&lt;mat-icon&gt;lock&lt;/mat-icon&gt;&lt;/button&gt;&lt;mat-button-toggle-group&gt;<br />
+                &lt;mat-button-toggle
+                value="left"&gt;&lt;mat-icon&gt;format_align_left&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="center"&gt;&lt;mat-icon&gt;format_align_center&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="right"&gt;&lt;mat-icon&gt;format_align_right&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle
+                value="justify"&gt;&lt;mat-icon&gt;format_align_justify&lt;/mat-icon&gt;&lt;/mat-button-toggle&gt;<br />
+                &lt;/mat-button-toggle-group&gt;<br />
+                &lt;mat-button-toggle-group multiple&gt;<br />
+                &lt;mat-button-toggle&gt;Flour&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Eggs&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Sugar&lt;/mat-button-toggle&gt;<br />
+                &lt;mat-button-toggle&gt;Milk&lt;/mat-button-toggle&gt;<br />
+                &lt;/mat-button-toggle-group&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="col-12 row block">
+      <div class="col-7">
+        <h2>Preview</h2>
+
+        <mat-card>
+          <mat-card-header>
+            <img mat-card-avatar src="./assets/user.jpg" />
+            <mat-card-subtitle> Yesterday </mat-card-subtitle>
+            <mat-card-title>Юи Хирасава</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="assets/1.jpg" />
+          <mat-card-content>
+            <p>
+              Piqued favour stairs it enable exeter as seeing. Remainder met
+              improving but engrossed sincerity age. Better but length gay
+              denied abroad are. Attachment astonished to on appearance
+              imprudence so collecting in excellence. Tiled way blind lived
+              whose new. The for fully had she there leave merit enjoy forth.
+            </p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <div fxLayout="row">
+              <button mat-icon-button>
+                <mat-icon>share</mat-icon>
+              </button>
+              <button mat-icon-button>
+                <mat-icon>favorite</mat-icon>
+              </button>
+              <span fxFlex></span>
+              <button mat-button>More Info</button>
+              <button mat-button>Save as</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col">
+        <h1>Cards</h1>
+        <span class="gray">&lt;mat-card&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Cards may contain a photo, text, and a link about a single
+                subject. They may display content containing elements of varying
+                size, such as photos with captions of variable length.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-card</span>&gt;<br />
+                &lt;<span class="yellow">mat-card-header</span>&gt;<br />
+                &lt;<span class="yellow"
+                  >img mat-card-avatar src="assets/img/avatars/3.jpg"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-subtitle</span>&gt;<br />
+                Yesterday &lt;<span class="yellow">/mat-card-subtitle</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-title</span>&gt;Gerald
+                Morris&lt;<span class="yellow">/mat-card-title</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card-header</span>&gt;<br />
+                &lt;<span class="yellow"
+                  >img mat-card-image src="assets/img/backgrounds/1.jpg"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-content</span>&gt;<br />
+                &lt;<span class="yellow">p</span>&gt;Piqued favour stairs it
+                enable exeter as seeing. Remainder met improving but engrossed
+                sincerity age. Better but length gay denied abroad are.
+                Attachment astonished to on appearance imprudence so collecting
+                in excellence. Tiled way blind lived whose new. The for fully
+                had she there leave merit enjoy forth. &lt;<span class="yellow"
+                  >/p</span
+                >&gt;<br />
+                &lt;<span class="yellow">/mat-card-content</span>&gt;<br />
+                &lt;<span class="yellow">mat-divider</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-divider</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-card-actions</span>&gt;<br />
+                &lt;<span class="yellow">div fxLayout="row"</span>&gt;<br />
+                &lt;<span class="yellow">button mat-icon-button</span>&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;share&lt;<span
+                  class="yellow"
+                  >/mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">button mat-icon-button</span>&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;favorite&lt;<span
+                  class="yellow"
+                  >/mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">span fxFlex</span>&gt;&lt;<span
+                  class="yellow"
+                  >/span</span
+                >&gt;<br />
+                &lt;<span class="yellow">button mat-button</span>&gt;<br />
+                More Info &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">button mat-button</span>&gt;<br />
+                Save as &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">/div</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card-actions</span>&gt;<br />
+                &lt;<span class="yellow">/mat-card</span>&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <mat-checkbox>Checkbox</mat-checkbox><br />
+        <mat-checkbox color="primary" [checked]="true">Primary</mat-checkbox
+        ><br />
+        <mat-checkbox color="accent" [checked]="true">Accent</mat-checkbox
+        ><br />
+        <mat-checkbox color="warn" [checked]="true">Warn</mat-checkbox><br />
+        <mat-checkbox disabled [checked]="true">Disabled</mat-checkbox><br />
+        <mat-checkbox [indeterminate]="true">Indeterminate</mat-checkbox><br />
+      </div>
+      <div class="col">
+        <h1>Checkbox</h1>
+        <span class="gray">&lt;mat-checkbox&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Checkboxes allow the user to select multiple options from a set.
+                <br />
+                If you have multiple options appearing in a list, you can
+                preserve space by using checkboxes instead of on/off switches.
+                <br />
+                If you have a single option, avoid using a checkbox and use an
+                on/off switch instead.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                <span class="yellow">&lt;mat-checkbox</span>&gt;Checkbox<span
+                  class="yellow"
+                  >&lt;/mat-checkbox</span
+                >&gt;<br />
+                <span class="yellow">&lt;mat-checkbox</span> color=<span
+                  class="green"
+                  >"primary"</span
+                >
+                [checked]=<span class="green">"true"</span>&gt;Primary<span
+                  class="yellow"
+                  >&lt;/mat-checkbox</span
+                >&gt;<br />
+                <span class="yellow">&lt;mat-checkbox</span> color=<span
+                  class="green"
+                  >"accent"</span
+                >
+                [checked]=<span class="green">"true"</span>&gt;Accent<span
+                  class="yellow"
+                  >&lt;/mat-checkbox</span
+                >&gt;<br />
+                <span class="yellow">&lt;mat-checkbox</span> color=<span
+                  class="green"
+                  >"warn"</span
+                >
+                [checked]=<span class="green">"true"</span>&gt;Warn<span
+                  class="yellow"
+                  >&lt;/mat-checkbox</span
+                >&gt; <br />
+                <span class="yellow">&lt;mat-checkbox</span> disabled
+                [checked]=<span class="green">"true"</span>&gt;Disabled<span
+                  class="yellow"
+                  >&lt;/mat-checkbox</span
+                >&gt; <br />
+                <span class="yellow">&lt;mat-checkbox</span>
+                [indeterminate]=<span class="green">"true"</span
+                >&gt;Indeterminate<span class="yellow">&lt;/mat-checkbox</span
+                >&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <button
+          mat-raised-button
+          color="primary"
+          class="col-12"
+          (click)="openDialog()"
+        >
+          Open dialog
+        </button>
+      </div>
+      <div class="col">
+        <h1>Dialogs</h1>
+        <span class="gray">&lt;mat-dialog&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Dialogs contain text and UI controls. They retain focus until
+                dismissed or a required action has been taken. Use dialogs
+                sparingly because they are interruptive.
+              </p>
+              <p>
+                <b>Some dialog types include:</b><br />
+                <b>Alerts</b> are urgent interruptions that inform about a
+                situation and require acknowledgement. <br />
+                <b>Simple menus</b> display options for list items, whereas
+                simple dialogs can provide details or actions about a list item.
+                <br />
+                <b>Confirmation dialogs</b> require users to explicitly confirm
+                a choice.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">button</span> mat-raised-button
+                color=<span class="green">"primary"</span> class=<span
+                  class="green"
+                  >"col-12"</span
+                >
+                (click)=<span class="green">"openDialog()"</span>&gt;Open
+                dialog&lt;<span class="yellow">/button</span>&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-4">
+        <h2>Preview</h2>
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile
+            *ngFor="let tile of tiles"
+            [colspan]="tile.cols"
+            [rowspan]="tile.rows"
+            [style.background]="tile.color"
+          >
+            {{ tile.text }}
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <div class="col">
+        <h1>Grid List</h1>
+        <span class="gray">&lt;mat-grid-list&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                A grid list consists of a repeated pattern of cells arrayed in a
+                vertical and horizontal layout.
+              </p>
+              <p>
+                Grid lists are best used on similar data types. They help
+                improve the visual comprehension of the content they contain.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-grid-list</span> cols=<span
+                  class="green"
+                  >"4"</span
+                >
+                rowHeight=<span class="green">"100px"</span>&gt; <br />
+                &lt;<span class="yellow">mat-grid-tile</span><br />
+                *ngFor=<span class="green">"let tile of tiles"</span>
+                [colspan]=<span class="green">"tile.cols"</span> [rowspan]=<span
+                  class="green"
+                  >"tile.rows"</span
+                >
+                [style.background]=<span class="green">"tile.color"</span
+                >&gt;<br />
+                ｛｛ tile.text ｝｝<br />
+                &lt;<span class="yellow">/mat-grid-tile</span>&gt;<br />
+                &lt;<span class="yellow">/mat-grid-list</span>&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-4">
+        <h2>Preview</h2>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <h1>Input</h1>
+        <span class="gray">&lt;mat-input&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Text fields typically reside in forms but can appear in other
+                places, like dialog boxes and search.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-form-field</span> appearance=<span
+                  class="green"
+                  >"fill"</span
+                >&gt;<br />
+                &lt;<span class="yellow">mat-label</span>Enter your
+                password&lt;<span class="yellow">/mat-label</span>&gt;<br />
+                &lt;<span class="yellow">input</span> matInput [type]=<span
+                  class="green"
+                  >"hide ? 'password' : 'text'"</span
+                >&gt;<br />
+                &lt;<span class="yellow">button</span> mat-icon-button matSuffix
+                (click)=<span class="green">"hide = !hide"</span>
+                [attr.aria-label]=<span class="green">"'Hide password'"</span>
+                [attr.aria-pressed]=<span class="green">"hide"</span>&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>｛｛ hide ?
+                'visibility_off' : 'visibility' ｝｝&lt;<span class="yellow"
+                  >/mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">/button</span>&gt;<br />
+                &lt;<span class="yellow">/mat-form-field</span>&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-6">
+        <h2>Preview</h2>
+        <mat-list class="list mat-elevation-z1">
+          <h3 mat-subheader>Contacts</h3>
+          <mat-list-item>
+            <img
+              mat-list-avatar
+              src="https://fury.visurel.com/assets/img/avatars/1.jpg"
+            />
+            <h3 matLine>John</h3>
+            <p matLine>
+              <span>Brunch?</span>
+              <span class="subline"
+                >-- Did you want to go on Sunday? I was thinking</span
+              >
+            </p>
+          </mat-list-item>
+          <mat-list-item>
+            <img
+              mat-list-avatar
+              src="https://fury.visurel.com/assets/img/avatars/2.jpg"
+            />
+            <h3 matLine>Peter</h3>
+            <p matLine>
+              <span>Summer BBQ</span>
+              <span class="subline"
+                >-- Wish I could come, but I have some special</span
+              >
+            </p>
+          </mat-list-item>
+          <mat-list-item>
+            <img
+              mat-list-avatar
+              src="https://fury.visurel.com/assets/img/avatars/3.jpg"
+            />
+            <h3 matLine>Nancy</h3>
+            <p matLine>
+              <span>Oui oui</span>
+              <span class="subline">-- Have you booked the Paris trip?</span>
+            </p>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <h3 mat-subheader>Other</h3>
+          <mat-list-item>
+            <img
+              mat-list-avatar
+              src="https://fury.visurel.com/assets/img/avatars/4.jpg"
+            />
+            <h3 matLine>Frank</h3>
+            <p matLine>
+              <span>Pretty decent!</span>
+              <span class="subline">-- You look pretty... decent!</span>
+            </p>
+          </mat-list-item>
+          <mat-list-item>
+            <img
+              mat-list-avatar
+              src="https://fury.visurel.com/assets/img/avatars/5.jpg"
+            />
+            <h3 matLine>Donald</h3>
+            <p matLine>
+              <span>That's great!</span>
+              <span class="subline">-- Great work mate!</span>
+            </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="col">
+        <h1>Lists</h1>
+        <span class="gray">&lt;mat-list&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Lists are made up of a continuous column of rows. Each row
+                contains a tile. Primary actions fill the tile, and supplemental
+                actions are represented by icons and text.
+              </p>
+              <p>
+                Lists are best suited to presenting a homogeneous data type or
+                sets of data types, such as images and text. They are optimized
+                for reading comprehension while differentiating either between
+                similar data types, or qualities within a single data type.
+              </p>
+
+              <p>
+                <b> List alternatives:</b> <br />
+                If more than three lines of text need to be shown in list tiles,
+                use cards instead <br />
+                If the primary distinguishing content consists of images, use a
+                grid list <br />
+              </p>
+
+              <p>
+                <b>Density</b> <br />
+                When the mouse and keyboard are the primary input methods,
+                measurements may be condensed to accommodate denser layouts.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;mat-list class="list mat-elevation-z1"&gt; <br />
+                &lt;h3 mat-subheader&gt;Contacts&lt;/h3&gt;<br />
+                &lt;mat-list-item&gt;<br />
+                &lt;img mat-list-avatar
+                src="https://fury.visurel.com/assets/img/avatars/1.jpg"&gt;<br />
+                &lt;h3 matLine&gt;John&lt;/h3&gt;<br />
+                &lt;p matLine&gt;<br />
+                &lt;span&gt;Brunch?&lt;/span&gt;<br />
+                &lt;span class="subline"&gt;-- Did you want to go on Sunday? I
+                was thinking&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/mat-list-item&gt;<br />
+                &lt;mat-list-item&gt;<br />
+                &lt;img mat-list-avatar
+                src="https://fury.visurel.com/assets/img/avatars/2.jpg"&gt;<br />
+                &lt;h3 matLine&gt;Peter&lt;/h3&gt;<br />
+                &lt;p matLine&gt;<br />
+                &lt;span&gt;Summer BBQ&lt;/span&gt;<br />
+                &lt;span class="subline"&gt;-- Wish I could come, but I have
+                some special&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/mat-list-item&gt;<br />
+                &lt;mat-list-item&gt;<br />
+                &lt;img mat-list-avatar
+                src="https://fury.visurel.com/assets/img/avatars/3.jpg"&gt;<br />
+                &lt;h3 matLine&gt;Nancy&lt;/h3&gt;<br />
+                &lt;p matLine&gt;<br />
+                &lt;span&gt;Oui oui&lt;/span&gt;<br />
+                &lt;span class="subline"&gt;-- Have you booked the Paris
+                trip?&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/mat-list-item&gt;<br />
+                &lt;mat-divider&gt;&lt;/mat-divider&gt;<br />
+                &lt;h3 mat-subheader&gt;Other&lt;/h3&gt;<br />
+                &lt;mat-list-item&gt;<br />
+                &lt;img mat-list-avatar
+                src="https://fury.visurel.com/assets/img/avatars/4.jpg"&gt;<br />
+                &lt;h3 matLine&gt;Frank&lt;/h3&gt;<br />
+                &lt;p matLine&gt;<br />
+                &lt;span&gt;Pretty decent!&lt;/span&gt;<br />
+                &lt;span class="subline"&gt;-- You look pretty...
+                decent!&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/mat-list-item&gt;<br />
+                &lt;mat-list-item&gt;<br />
+                &lt;img mat-list-avatar
+                src="https://fury.visurel.com/assets/img/avatars/5.jpg"&gt;<br />
+                &lt;h3 matLine&gt;Donald&lt;/h3&gt;<br />
+                &lt;p matLine&gt;<br />
+                &lt;span&gt;That's great!&lt;/span&gt;<br />
+                &lt;span class="subline"&gt;-- Great work mate!&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/mat-list-item&gt;<br />
+                &lt;/mat-list&gt;<br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="col">
+        <h1>Menu</h1>
+        <span class="gray">&lt;mat-menu&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Menus offer a list of options that are displayed when triggered.
+                The position (before, after) and (above, below) is automatically
+                decided, but can be overridden with e.g. x-position='before'.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                <span class="yellow">button</span> mat-icon-button
+                [matMenuTriggerFor]=<span class="green">"menu"</span>
+                aria-label=<span class="green"
+                  >"Example icon-button with a menu"</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-icon</span>&gt;more_vert&lt;/<span
+                  class="yellow"
+                  >mat-icon</span
+                >&gt;<br />
+                &lt;/<span class="yellow">button</span>&gt;<br />
+                &lt;<span class="yellow">mat-menu</span> #menu=<span
+                  class="green"
+                  >"matMenu"</span
+                >&gt;<br />
+                &lt;<span class="yellow">button</span> mat-menu-item&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;dialpad&lt;/<span
+                  class="yellow"
+                  >mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">span</span>&gt;Redial&lt;<span
+                  class="yellow"
+                  >/span</span
+                >&gt;<br />
+                &lt;/<span class="yellow">button</span>&gt;<br />
+                &lt;<span class="yellow">button</span> mat-menu-item
+                disabled&gt;<br />
+                &lt;<span class="yellow">mat-icon</span>&gt;voicemail&lt;/<span
+                  class="yellow"
+                  >mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">span</span>&gt;Check voice
+                mail&lt;<span class="yellow">/span</span>&gt;<br />
+                &lt;/<span class="yellow">button</span>&gt;<br />
+                &lt;<span class="yellow">button</span> mat-menu-item&gt;<br />
+                &lt;<span class="yellow">mat-icon</span
+                >&gt;notifications_off&lt;/<span class="yellow">mat-icon</span
+                >&gt;<br />
+                &lt;<span class="yellow">span</span>&gt;Disable alerts&lt;<span
+                  class="yellow"
+                  >/span</span
+                >&gt;<br />
+                &lt;/<span class="yellow">button</span>&gt;<br />
+                &lt;/<span class="yellow">mat-menu&gt;</span>
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3 center">
+        <h2>Preview</h2>
+        <mat-progress-bar mode="determinate" [value]="40"></mat-progress-bar>
+        <br />
+        <mat-progress-bar
+          mode="indeterminate"
+          color="primary"
+        ></mat-progress-bar>
+        <br />
+        <mat-progress-bar mode="buffer" color="primary"></mat-progress-bar>
+        <br />
+        <mat-progress-bar mode="query" color="warn"></mat-progress-bar> <br />
+      </div>
+      <div class="col">
+        <h1>Progress Bar</h1>
+        <span class="gray">&lt;mat-progress-bar&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                A linear progress indicator should always fill from 0% to 100%
+                and never decrease in value. It should be represented by bars on
+                the edge of a header or sheet that appear and disappear. <br />
+                For multiple operations happening in sequence, use the indicator
+                to represent the progress as a whole, and not each individual
+                operation.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-progress-bar</span> mode=<span
+                  class="green"
+                  >"determinate"</span
+                >
+                [value]=<span class="green">"40"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-bar</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-progress-bar</span> mode=<span
+                  class="green"
+                  >"indeterminate"</span
+                >
+                color=<span class="green">"primary"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-bar</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-progress-bar</span> mode=<span
+                  class="green"
+                  >"buffer"</span
+                >
+                color=<span class="green">"primary"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-bar</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-progress-bar</span> mode=<span
+                  class="green"
+                  >"query"</span
+                >
+                color=<span class="green">"warn"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-bar</span
+                >&gt; <br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <mat-progress-spinner
+          mode="determinate"
+          [value]="40"
+        ></mat-progress-spinner>
+        <br />
+        <mat-progress-spinner
+          mode="indeterminate"
+          color="accent"
+        ></mat-progress-spinner>
+      </div>
+      <div class="col">
+        <h1>Progress Spinner</h1>
+        <span class="gray">&lt;mat-progress-spinner&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                A single visual indicator should be used to represent each type
+                of operation. For example, a refresh operation should display
+                either a refresh bar or an activity circle, but not both.
+              </p>
+              <p>
+                Determinate indicators display how long an operation will take.
+                <br />
+                Indeterminate indicators visualize an unspecified wait time.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-progress-spinner</span> mode=<span
+                  class="green"
+                  >"determinate"</span
+                >
+                [value]=<span class="green">"40"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-spinner</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-progress-spinner</span> mode=<span
+                  class="green"
+                  >"indeterminate"</span
+                >
+                color=<span class="green">"primary"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-progress-spinner</span
+                >&gt; <br />
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <label id="example-radio-group-label">Pick your favorite season</label>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
+          [(ngModel)]="favoriteSeason"
+        >
+          <mat-radio-button
+            class="col-12 radio"
+            *ngFor="let season of seasons"
+            [value]="season"
+          >
+            {{ season }}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>Your favorite season is: {{ favoriteSeason }}</div>
+      </div>
+      <div class="col">
+        <h1>Radio</h1>
+        <span class="gray">&lt;mat-radio-group&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Radio buttons allow the user to select one option from a set.
+                Use radio buttons for exclusive selection if you think that the
+                user needs to see all available options side-by-side. <br />
+                Otherwise, consider a dropdown, which uses less space than
+                displaying all options.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">label</span> id=<span class="green"
+                  >"example-radio-group-label"</span
+                >&gt;Pick your favorite season&lt;<span class="yellow"
+                  >/label</span
+                >&gt; <br />
+                &lt;<span class="yellow">mat-radio-group</span><br />
+                aria-labelledby=<span class="green"
+                  >"example-radio-group-label"</span
+                ><br />
+                class=<span class="green">"example-radio-group"</span><br />
+                [(ngModel)]=<span class="green">"favoriteSeason"</span>
+                &gt;<br />
+                &lt;<span class="yellow">mat-radio-button</span><br />
+                class=<span class="green">"example-radio-button"</span><br />
+                *ngFor=<span class="green">"let season of seasons"</span><br />
+                [value]=<span class="green">"season"</span> &gt;<br />
+                ｛｛ season ｝｝<br />
+                &lt;<span class="yellow">/mat-radio-button</span>&gt;<br />
+                &lt;<span class="yellow">/mat-radio-group</span>&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <mat-slider
+          class="col-12"
+          min="1"
+          max="10"
+          thumbLabel
+          tickInterval="1"
+          [value]="5"
+        ></mat-slider>
+        <mat-slider class="col-12" aria-label="unit(s)"></mat-slider>
+        <mat-slider
+          class="col-12"
+          aria-label="unit(s)"
+          min="1"
+          max="10"
+          [value]="8"
+        ></mat-slider>
+      </div>
+      <div class="col">
+        <h1>Slider</h1>
+        <span class="gray">&lt;mat-slider&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Sliders are ideal components for adjusting settings that reflect
+                intensity levels, such as volume, brightness, or color
+                saturation.
+              </p>
+              <p>
+                Sliders may have icons on both ends of the bar that reflect the
+                value intensity. Place the smallest value for the slider range
+                on the left and the largest value on the right.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-slider</span> class=<span
+                  class="green"
+                  >"col-12"</span
+                >
+                min=<span class="green">"1"</span> max=<span class="green"
+                  >"10"</span
+                >
+                thumbLabel tickInterval=<span class="green">"1"</span>
+                [value]=<span class="green">"5"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-slider</span
+                >&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-3">
+        <h2>Preview</h2>
+        <mat-slide-toggle
+          class="slide-toggle col-12"
+          [checked]="true"
+        ></mat-slide-toggle>
+        <mat-slide-toggle
+          class="slide-toggle col-12"
+          color="primary"
+          [checked]="true"
+        ></mat-slide-toggle>
+        <mat-slide-toggle
+          class="slide-toggle col-12"
+          color="accent"
+          [checked]="true"
+        ></mat-slide-toggle>
+        <mat-slide-toggle
+          class="slide-toggle col-12"
+          color="warn"
+          [checked]="true"
+        ></mat-slide-toggle>
+        <mat-slide-toggle
+          class="slide-toggle col-12"
+          disabled
+        ></mat-slide-toggle>
+      </div>
+      <div class="col">
+        <h1>Slide Toggle</h1>
+        <span class="gray">&lt;mat-slide-toggle&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                On/off switches toggle the state of a single settings option.
+                The option that the switch controls, as well as the state it’s
+                in, should be made clear from the corresponding inline label.
+                Switches take on the same visual properties of the radio button.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">mat-slide-toggle</span> color=<span
+                  class="green"
+                  >"primary"</span
+                >
+                [checked]=<span class="green">"true"</span>&gt;&lt;<span
+                  class="yellow"
+                  >/mat-slide-toggle</span
+                >&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block">
+      <div class="col-4">
+        <h2>Preview</h2>
+        <mat-form-field appearance="fill">
+          <mat-label>Snack bar duration (seconds)</mat-label>
+          <input type="number" [(ngModel)]="durationInSeconds" matInput />
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openSnackBar()"
+          aria-label="Show an example snack-bar"
+        >
+          Open Snackbar
+        </button>
+      </div>
+      <div class="col">
+        <h1>Snack Bar</h1>
+        <span class="gray">&lt;mat-snack-bar&gt;</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Snackbars contain a single line of text directly related to the
+                operation performed. They may contain a text action, but no
+                icons.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">button</span> mat-raised-button
+                color=<span class="green">"primary"</span> (click)=<span
+                  class="green"
+                  >"openSnackBar()"</span
+                >&gt; Open Snackbar &lt;/button&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+
+    <div class="col-12 row block" name="tooltip">
+      <div class="col-4 center">
+        <h2>Preview</h2>
+        <mat-icon matTooltip="Info about the action">favorite</mat-icon>
+      </div>
+      <div class="col">
+        <h1>Tooltip</h1>
+        <span class="gray">matTooltip=""</span>
+
+        <mat-tab-group>
+          <mat-tab label="DESCRIPTION">
+            <div class="description">
+              <p>
+                Tooltips identify an element when they are activated. They may
+                contain brief helper text about its function. For example, they
+                may contain text information about actionable icons. Tooltip
+                labels do not receive input focus.
+              </p>
+            </div>
+          </mat-tab>
+          <mat-tab label="SOURCE CODE">
+            <code>
+              <p>
+                &lt;<span class="yellow">button</span> mat-raised-button
+                matTooltip=<span class="green">"Info about the action"</span>
+                &gt; Open Snackbar &lt;<span class="yellow">/button</span>&gt;
+              </p>
+            </code>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>

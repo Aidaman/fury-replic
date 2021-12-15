@@ -7,6 +7,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { Safehtml } from './safehtml.pipe';
+
 import { AllInOneTableComponent } from './tables/all-in-one-table/all-in-one-table.component';
 import { CalendarComponent } from './apps/calendar/calendar.component';
 import { PrimaryComponent } from './apps/inbox/primary/primary.component';
@@ -28,6 +52,9 @@ import { BlankComponent } from './blank/blank.component';
 import { GoogleMapsComponent } from './maps/google-maps/google-maps.component';
 import { IconsComponent } from './icons/icons.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { Level5Component } from './level1/level2/level3/level4/level5/level5.component';
+import { ExampleDialogComponent } from './components/dialog/example-dialog/example-dialog.component';
+import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar/example-snackbar.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +80,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     GoogleMapsComponent,
     IconsComponent,
     DashboardComponent,
+    Safehtml,
+    Level5Component,
+    ExampleDialogComponent,
+    ExampleSnackbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +91,28 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
+    MatListModule,
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },
@@ -82,6 +135,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       { path: 'blank', component: BlankComponent },
       { path: 'maps/google-maps', component: GoogleMapsComponent },
       { path: 'icons', component: IconsComponent },
+      { path: 'level1/level2/level3/level4/level5', component: Level5Component },
     ]),
   ],
   providers: [],

@@ -1,0 +1,32 @@
+.header h2, .header p, .header a {
+    color: black;
+    text-decoration: none;
+    margin: 0;
+}
+
+.icon_block, .block {
+    box-shadow: 0px 1px 3px rgb(158, 158, 158);
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+}
+
+.block>h2, .block>span {
+    text-align: left;
+    margin: 0;
+}
+.block>span {
+    color: gray;
+}
+.icon_block>span {
+    font-size: 48px;
+}
+
+.icon_block>p {
+    margin: 5px 0 0 0;
+}
+
+.icon_block:hover {
+    color: rgb(5, 39, 114);
+    box-shadow: 0px 1px 3px rgb(110, 110, 110);
+}

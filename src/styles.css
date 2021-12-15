@@ -30,3 +30,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.mat-expansion-panel-body {
+  padding: 0;
+}
+
+.mat-expansion-indicator, .mat-expansion-indicator::after {
+  color: white;
+  vertical-align:top;
+}
