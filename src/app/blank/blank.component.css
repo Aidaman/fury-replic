@@ -1,0 +1,13 @@
+div {
+    margin: 15px 0 0 0;
+    padding-bottom: 90vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+div>h2 {
+    margin: 0;
+}
