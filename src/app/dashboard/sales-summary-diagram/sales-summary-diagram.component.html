@@ -1,0 +1,65 @@
+<!-- <mat-card-title class="head">Sales Summary</mat-card-title> -->
+<div class="header-row-space-between ">
+    <mat-card-title>Sales Summary</mat-card-title>
+    <div class="flex-row">
+        <button mat-icon-button>
+            <mat-icon class="color-white">refresh</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+            <mat-icon class="color-white">more_vert</mat-icon>
+        </button>
+        <mat-menu #menuTotalSales="matMenu">
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              <span>Settings</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>more</mat-icon>
+              <span>More info</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>remove_circle</mat-icon>
+              <span>Remove widget</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>
+<mat-card-subtitle class="weak-title">Compare Sales by Time</mat-card-subtitle>
+<mat-card-title class="salesValues flex-row-space-between">
+    <div class="flex-column">
+        <div class="time-span">Monthly Sales</div>
+        <div class="time-span-value green">
+            <span>473</span> 
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </div>
+    </div>
+    <div class="flex-column">
+        <div class="time-span">Sales Today</div>
+        <div class="time-span-value red">
+            <span>46</span> 
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </div>
+    </div>
+</mat-card-title>
+<mat-card-content>
+    <ngx-charts-area-chart
+        [view]="view"
+        [scheme]="colorScheme"
+        [legend]="legend"
+        [curve]="curve"
+
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        
+        [timeline]="timeline"
+        [results]="data"
+
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)">
+    </ngx-charts-area-chart>
+</mat-card-content>

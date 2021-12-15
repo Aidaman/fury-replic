@@ -136,11 +136,27 @@
     <div class="graffic">
         <app-switching-line-chard-diagram></app-switching-line-chard-diagram>
     </div>
-    <div class="grid-2x2 merge-rows-2">
-
+    <div class="grid-2x1-5">
+        <mat-card class="Sales Summary">
+            <app-sales-summary-diagram></app-sales-summary-diagram>
+        </mat-card>
+        <mat-card class="merge-rows active-users color-white">
+            <app-active-users-diagram></app-active-users-diagram>
+        </mat-card>
+        <mat-card class="customers row-space-between">
+            <div class="flex-column">
+                <h2 class="customers-number">234</h2>
+                <h4 class="customers-header">Customers</h4>
+            </div>
+            <button mat-icon-button >
+                <mat-icon class="font-size-60">group</mat-icon>
+            </button>
+        </mat-card>
     </div>
     <div class="circle-diagram">
-
+        <mat-card>
+            <app-circle-diagram></app-circle-diagram>
+        </mat-card>
     </div>
     <div class="topCategories-shibaInu">
 

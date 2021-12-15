@@ -54,6 +54,9 @@ import { VisitsComponent } from './dashboard/visits/visits.component';
 import { TotalClicksComponent } from './dashboard/total-clicks/total-clicks.component';
 import { ConversionsComponent } from './dashboard/conversions/conversions.component';
 import { SwitchingLineChardDiagramComponent } from './dashboard/switching-line-chard-diagram/switching-line-chard-diagram.component';
+import { ActiveUsersDiagramComponent } from './dashboard/active-users-diagram/active-users-diagram.component';
+import { SalesSummaryDiagramComponent } from './dashboard/sales-summary-diagram/sales-summary-diagram.component';
+import { CircleDiagramComponent } from './dashboard/circle-diagram/circle-diagram.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import { SwitchingLineChardDiagramComponent } from './dashboard/switching-line-c
     TotalClicksComponent,
     ConversionsComponent,
     SwitchingLineChardDiagramComponent,
+    ActiveUsersDiagramComponent,
+    SalesSummaryDiagramComponent,
+    CircleDiagramComponent,
   ],
   imports: [
     BrowserModule,

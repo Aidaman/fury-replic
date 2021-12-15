@@ -1,0 +1,32 @@
+<mat-card-title class="head">
+     <p>Active Users right now</p>
+     <button mat-icon-button (click)="update()">
+         <mat-icon>update</mat-icon>
+     </button>
+</mat-card-title>
+<mat-card-title class="amount">70</mat-card-title>
+<mat-card-title class="weak-title">page views per minute</mat-card-title>
+<ngx-charts-bar-vertical-2d
+    [view]="view"
+    [scheme]="colorScheme"
+    [legend]="legend"
+
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    
+    [results]="data"
+    
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)">
+</ngx-charts-bar-vertical-2d>
+<mat-card-title class="weak-title">page views per minute</mat-card-title>
+<div class="flex-list">
+    <p>/tables/all-in-one-table</p>
+    <p>/apps/calendar</p>
+    <p>/register</p>
+</div>

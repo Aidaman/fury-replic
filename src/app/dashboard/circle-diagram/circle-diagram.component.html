@@ -1,0 +1,36 @@
+<div class="header-row-space-between ">
+    <mat-card-title>Sales by country</mat-card-title>
+    <div class="flex-row">
+        <button mat-icon-button>
+            <mat-icon class="color-white">refresh</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+            <mat-icon class="color-white">more_vert</mat-icon>
+        </button>
+        <mat-menu #menuTotalSales="matMenu">
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              <span>Settings</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>more</mat-icon>
+              <span>More info</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>remove_circle</mat-icon>
+              <span>Remove widget</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>
+<mat-card-subtitle class="weak-title">Top 3 countries sold 34% more items this month</mat-card-subtitle>
+<ngx-charts-advanced-pie-chart 
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="data"
+        [gradient]="gradient"
+
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)">
+</ngx-charts-advanced-pie-chart>
