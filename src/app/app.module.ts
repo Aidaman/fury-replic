@@ -10,12 +10,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { WysiwygEditorComponent } from './wysiwyg-editor/wysiwyg-editor.component';
+import { HttpClientModule} from '@angular/common/http';
+
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DragDropComponent,
-    WysiwygEditorComponent
+    WysiwygEditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,9 @@ import { WysiwygEditorComponent } from './wysiwyg-editor/wysiwyg-editor.componen
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
-    DragDropModule
+    DragDropModule,
+    HttpClientModule, 
+    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

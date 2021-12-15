@@ -1,9 +1,11 @@
+<div class="container">
+
 <div class="blueRectangle">
     <h2>Drag & Drop</h2>
     <h3>Home   >   Drag & Drop</h3>
 </div>
 
-<div class="example-container">
+<div class="example-container col-6">
   <br>
     <span class="ToDoHeader">To do tasks</span>
   <br>
@@ -20,7 +22,7 @@
     </div>
   </div>
   
-  <div class="example-container">
+  <div class="example-container col-6">
     <br>
     <span class="ToDoHeader">Done tasks</span>
     <br>
@@ -35,3 +37,4 @@
       <div class="example-box" *ngFor="let item of done" cdkDrag>✓ {{item}}</div>
     </div>
   </div>
+</div>

@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wysiwyg-editor.component.css']
 })
 export class WysiwygEditorComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

@@ -5,8 +5,6 @@
     width: 100%;
     margin:0;
     margin-top:50px;
-    /* margin-left:-10px;
-    margin-right:-20px; */
     background-color: #1277d3;
    
 }
@@ -38,9 +36,12 @@ span{
 .example-container {
   width: 400px;
   max-width: 100%;
-  margin: -50px 25px 50px 25px;
+  /* margin: -50px 25px 50px 25px; */
+  margin-top:-50px;
+  margin-left:45px;
   display: inline-block;
   vertical-align: top;
+
   background-color:white;
   border-radius:15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
