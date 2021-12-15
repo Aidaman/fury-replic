@@ -1,0 +1,115 @@
+.grid-2x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+.total-sales{
+    background-color: #966793;
+    
+}
+.visits, .active-users{
+    background-color: #605aa2;
+}
+.total-clicks, .customers{
+    background-color: #6e9a44;
+}
+.coversions{
+    background-color: #f6d2c9;
+}
+.top-grid-element{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 12px;
+    height: 300px;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.header-flex-row{
+    justify-content: space-between;
+}
+.color-white{
+    color: #FFFFFF;
+}
+.grid-2x1-5{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 120px;
+    gap: 1rem;
+}
+.row-space-between{
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    color: white; 
+}
+.font-size-60{
+    font-size: 100px;
+}
+.customers-number{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.merge-rows{
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 2;
+}
+.circle-diagram{
+    margin-top: 1rem;
+}
+.coming-soon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 1rem 0;
+    padding: 2rem 0;
+    border: #3333335f 5px dashed;
+}
+.coming-soon > h2{
+    color: black;
+}
+.grid-2x1{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.round-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 1px;
+    margin: 0 1rem;
+}
+.centre-it{
+    align-items: center;
+}
+.dog-img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+.flex-row-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    
+}
+.dog-button{
+    text-transform: uppercase;
+}
+.dog-button:hover{
+    background-color: #00000009;
+}

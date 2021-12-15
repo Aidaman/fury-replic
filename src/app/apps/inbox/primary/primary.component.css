@@ -1,0 +1,182 @@
+.content{
+    background-image: url('../../../../assets/inbox.png');
+    background-repeat: no-repeat;
+    background-color: #efefef;
+  
+    padding: 2rem 2rem 1.4rem 1rem;
+  }
+  .inbox-header, .bottom-content, .adresse-data{
+    display: flex;
+    flex-direction: row;
+  }
+  .mail-icon, .inbox-header h1{
+    color: #FFFFFF;
+  }
+  .mail-icon{
+    padding-top: 3px;
+    margin-right: 1rem;
+  }
+  .inbox-header h1{
+    font-size: 32px;
+    margin-right: 7rem;
+  }
+  .search-field{
+    padding-right: 1rem;
+  }
+  .search{
+    background-color: #fff;
+    color: black;
+  
+    width: 100%;
+    border-radius: .5rem;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bottom-content{
+    margin-top: 2rem;
+  }
+  .compose{
+    background: #673ab7;
+    color: #FFFFFF;
+    padding-inline: 3rem;
+  }
+  .compose mat-icon{
+    margin-right: 1rem;
+  }
+  .auxilliary{
+    display: flex;
+    flex-direction: column;
+  }
+  .span-inbox{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .directory{
+    text-align: start;
+    color: #AAAAAA;
+  
+    background-color: transparent;
+  
+    margin-top: .25rem;
+    padding-top: .5rem;
+  
+    margin-bottom: .25rem;
+    padding-bottom: .5rem;
+  
+    cursor: pointer;
+  }
+  .directory.active{
+    background-color: #fff;
+    color: #673ab7;
+  }
+  .directory:hover{
+    background-color: #fff;
+    color: #673ab7;
+  }
+  .directory mat-icon{
+    font-size: 25px;
+  }
+  .directory span{
+    margin-left: 1rem;
+    font-size: 18px;
+  }
+  /*.left-column{*/
+  /*  padding-top: 1rem;*/
+  /*  margin-right: 1rem;*/
+  /*}*/
+  .mail-container{
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    width: 100%;
+  }
+  .mail-checkbox{
+    margin-left: 1rem;
+  }
+  .messages{
+    height: 576px;
+    overflow-y: auto;
+  }
+  .message{
+    display: flex;
+    flex-direction: row;
+  
+    height: 64px;
+    width: 100%;
+  
+    border-top: rgba(153, 153, 153, 0.5) solid 1px;
+    /* border-bottom: #333333D5 solid 1px; */
+    /*border-radius: .5rem;*/
+  
+    cursor: pointer;
+  
+    transition: 300ms all ease-in-out;
+  }
+  .message:hover{
+    background-color: #eeeeee8c;
+  }
+  
+  .who-when{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 8rem;
+  }
+  .round-avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .star-icon{
+    transition: 200ms all ease-in-out;
+  }
+  .star-icon:hover{
+    color: #673ab7;
+  }
+  
+  
+  /* .fulltext{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .message.fulltext{
+    border: none;
+    padding-inline: 1rem;
+    margin-left: -.75rem;
+  }
+  .message.fulltext:hover{
+    background-color: #fff;
+    border: none;
+  } */
+  
+  .mail-conatiner.chosen{
+    grid-template-rows: 64px 1fr;
+    padding-inline: 2rem;
+  }
+  
+  .fulltext{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1.5rem;
+    height: 576px;
+  }
+  
+  .message-checkbox{
+    margin-left: 1rem;
+  }
+  .message-checkbox, .star-icon, .name, .round-avatar, .shorted-text{
+    margin-right: 1rem;
+  }
+  .time{
+    color: #AAAAAA;
+    font-weight: 600;
+  }
+  .display-none{
+    display: none;
+  }
+  

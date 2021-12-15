@@ -1,1 +1,201 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="grid-2x2">
+        <mat-card class="total-sales top-grid-element">
+            <div class="flex-row header-flex-row">
+                <div class="flex-col">
+                    <mat-card-title class="color-white">Total Sales</mat-card-title>
+                    <mat-card-subtitle class="color-white"><mat-icon>keyboard_arrow_up</mat-icon> 16.3% compared to last month</mat-card-subtitle>
+                </div>
+                <div class="flex-row">
+                    <button mat-icon-button>
+                        <mat-icon class="color-white">refresh</mat-icon>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+                        <mat-icon class="color-white">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menuTotalSales="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>settings</mat-icon>
+                          <span>Settings</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>more</mat-icon>
+                          <span>More info</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>remove_circle</mat-icon>
+                          <span>Remove widget</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <mat-card-content class="chart">
+                <app-total-sales-diagram ></app-total-sales-diagram>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="visits top-grid-element">
+            <div class="flex-row header-flex-row">
+                <div class="flex-col">
+                    <mat-card-title class="color-white">Visits</mat-card-title>
+                    <mat-card-subtitle class="color-white"><mat-icon>keyboard_arrow_up</mat-icon> 42.5% compared to last month</mat-card-subtitle>
+                </div>
+                <div class="flex-row">
+                    <button mat-icon-button>
+                        <mat-icon class="color-white">refresh</mat-icon>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+                        <mat-icon class="color-white">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menuTotalSales="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>settings</mat-icon>
+                          <span>Settings</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>more</mat-icon>
+                          <span>More info</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>remove_circle</mat-icon>
+                          <span>Remove widget</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <mat-card-content class="chart">
+                <app-visits-diagram></app-visits-diagram>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="total-clicks top-grid-element">
+            <div class="flex-row header-flex-row">
+                <div class="flex-col">
+                    <mat-card-title class="color-white">Total Clicks</mat-card-title>
+                    <mat-card-subtitle class="color-white"><mat-icon>keyboard_arrow_down</mat-icon> -6.1% compared to last month</mat-card-subtitle>
+                </div>
+                <div class="flex-row">
+                    <button mat-icon-button>
+                        <mat-icon class="color-white">refresh</mat-icon>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+                        <mat-icon class="color-white">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menuTotalSales="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>settings</mat-icon>
+                          <span>Settings</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>more</mat-icon>
+                          <span>More info</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>remove_circle</mat-icon>
+                          <span>Remove widget</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <mat-card-content class="chart">
+                <app-total-clicks-diagram></app-total-clicks-diagram>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="coversions top-grid-element">
+            <div class="flex-row header-flex-row">
+                <div class="flex-col">
+                    <mat-card-title class="color-white">Conversions</mat-card-title>
+                    <mat-card-subtitle class="color-white"><mat-icon>keyboard_arrow_up</mat-icon> -10.4% compared to last month</mat-card-subtitle>
+                </div>
+                <div class="flex-row">
+                    <button mat-icon-button>
+                        <mat-icon class="color-white">refresh</mat-icon>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menuTotalSales" aria-label="Example icon-button with a menu">
+                        <mat-icon class="color-white">more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menuTotalSales="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>settings</mat-icon>
+                          <span>Settings</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>more</mat-icon>
+                          <span>More info</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>remove_circle</mat-icon>
+                          <span>Remove widget</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <mat-card-content class="chart">
+                <app-conversions-diagram></app-conversions-diagram>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="graffic">
+        <app-switching-line-chard-diagram></app-switching-line-chard-diagram>
+    </div>
+    <div class="grid-2x1-5">
+        <mat-card class="Sales Summary">
+            <app-sales-summary-diagram></app-sales-summary-diagram>
+        </mat-card>
+        <mat-card class="merge-rows active-users color-white">
+            <app-active-users-diagram></app-active-users-diagram>
+        </mat-card>
+        <mat-card class="customers row-space-between">
+            <div class="flex-column">
+                <h2 class="customers-number">234</h2>
+                <h4 class="customers-header">Customers</h4>
+            </div>
+            <button mat-icon-button >
+                <mat-icon class="font-size-60">group</mat-icon>
+            </button>
+        </mat-card>
+    </div>
+    <div class="circle-diagram">
+        <mat-card>
+            <app-circle-diagram></app-circle-diagram>
+        </mat-card>
+    </div>
+    <div class="topCategories-shibaInu grid-2x1">
+        <mat-card>
+            <app-top-categories-diagram></app-top-categories-diagram>
+        </mat-card>
+        <mat-card class="Shiba-Inu">
+            <div class="flex-row">
+                <img src="../../assets/Users/UserAvatar.jpg" alt="" class="round-avatar">
+                <div class="flex-column centre-it">
+                    <mat-card-title><p>Shiba Inu</p></mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </div>
+            </div>
+            <mat-card-content>
+                <img class="dog-img" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+                </p>
+                <div class="flex-row-end">
+                    <button class="dog-button" mat-flat-button>like</button>
+                    <button class="dog-button" mat-flat-button>share</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="coming-soon full-width">
+        <h2>6 more widgets available</h2>
+        <button routerLink="/coming-soon" color="primary" mat-flat-button class="white-text">coming soon</button>
+    </div>
+    <div class="recentsales-table">
+        <mat-card>
+            <mat-card-title>Recent Sales</mat-card-title>
+            <mat-card-subtitle>See who bought what in realtime</mat-card-subtitle>
+            <app-recent-sales-table></app-recent-sales-table>
+            <app-some-random-unclear-diagram></app-some-random-unclear-diagram>
+        </mat-card>
+    </div>
+    <div class="maps full-width">
+        <app-google-maps></app-google-maps>
+    </div>
+</div>
+

@@ -4,17 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ScaleLinear, ScaleBand } from 'd3-scale';
+import { MatPseudoCheckboxModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule, MatFormField, MatFormFieldControl } from '@angular/material/form-field';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { Routes, RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -55,6 +58,28 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Level5Component } from './level1/level2/level3/level4/level5/level5.component';
 import { ExampleDialogComponent } from './components/dialog/example-dialog/example-dialog.component';
 import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar/example-snackbar.component';
+import { WriteMessageDialogComponent } from './apps/inbox/write-message-dialog/write-message-dialog.component';
+
+
+import { FillerComponent } from './page-layouts/filler/filler.component';
+
+import { MatDividerModule} from "@angular/material/divider";
+import { MatTableModule} from "@angular/material/table";
+import { MatSortModule} from "@angular/material/sort";
+import { MatPaginatorModule} from "@angular/material/paginator";
+import { MatSelectModule } from '@angular/material/select';
+import { TotalSalesComponent } from './dashboard/total-sales/total-sales.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { VisitsComponent } from './dashboard/visits/visits.component';
+import { TotalClicksComponent } from './dashboard/total-clicks/total-clicks.component';
+import { ConversionsComponent } from './dashboard/conversions/conversions.component';
+import { SwitchingLineChardDiagramComponent } from './dashboard/switching-line-chard-diagram/switching-line-chard-diagram.component';
+import { ActiveUsersDiagramComponent } from './dashboard/active-users-diagram/active-users-diagram.component';
+import { SalesSummaryDiagramComponent } from './dashboard/sales-summary-diagram/sales-summary-diagram.component';
+import { CircleDiagramComponent } from './dashboard/circle-diagram/circle-diagram.component';
+import { RecentSalesTableComponent } from './dashboard/recent-sales-table/recent-sales-table.component';
+import { SomeRandomUnclearDiagramComponent } from './dashboard/some-random-unclear-diagram/some-random-unclear-diagram.component';
+import { TopCategoriesDiagramComponent } from './dashboard/top-categories-diagram/top-categories-diagram.component';
 
 @NgModule({
   declarations: [
@@ -84,17 +109,35 @@ import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar
     Level5Component,
     ExampleDialogComponent,
     ExampleSnackbarComponent,
+    WriteMessageDialogComponent,
+    FillerComponent,
+    TotalSalesComponent,
+    VisitsComponent,
+    TotalClicksComponent,
+    ConversionsComponent,
+    SwitchingLineChardDiagramComponent,
+    ActiveUsersDiagramComponent,
+    SalesSummaryDiagramComponent,
+    CircleDiagramComponent,
+    RecentSalesTableComponent,
+    SomeRandomUnclearDiagramComponent,
+    TopCategoriesDiagramComponent,
+    ScaleLinear, 
+    ScaleBand
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonModule,
+    MatPseudoCheckboxModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatTabsModule,
     MatAutocompleteModule,
-    MatFormFieldModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
@@ -113,6 +156,19 @@ import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar
     MatSliderModule,
     MatSlideToggleModule,
     MatSnackBarModule,
+    MatCardModule,
+    MatTabsModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatDialogModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatSelectModule,
+    NgxChartsModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },
