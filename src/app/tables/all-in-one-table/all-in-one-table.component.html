@@ -11,7 +11,8 @@
   <div class="align-center">
     <mat-card class="z-depth-2">
       <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)">
+        <table mat-table [dataSource]="dataSource" 
+                matSort (matSortChange)="announceSortChange($event)">
   
           <!-- Image Column -->
           <ng-container matColumnDef="image" >

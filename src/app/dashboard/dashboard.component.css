@@ -66,3 +66,17 @@
 .circle-diagram{
     margin-top: 1rem;
 }
+.coming-soon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin: 1rem 0;
+    padding: 2rem 0;
+    border: #3333335f 5px dashed;
+}
+.coming-soon > h2{
+    color: black;
+}

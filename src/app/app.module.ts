@@ -57,6 +57,8 @@ import { SwitchingLineChardDiagramComponent } from './dashboard/switching-line-c
 import { ActiveUsersDiagramComponent } from './dashboard/active-users-diagram/active-users-diagram.component';
 import { SalesSummaryDiagramComponent } from './dashboard/sales-summary-diagram/sales-summary-diagram.component';
 import { CircleDiagramComponent } from './dashboard/circle-diagram/circle-diagram.component';
+import { RecentSalesTableComponent } from './dashboard/recent-sales-table/recent-sales-table.component';
+import { SomeRandomUnclearDiagramComponent } from './dashboard/some-random-unclear-diagram/some-random-unclear-diagram.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { CircleDiagramComponent } from './dashboard/circle-diagram/circle-diagra
     ActiveUsersDiagramComponent,
     SalesSummaryDiagramComponent,
     CircleDiagramComponent,
+    RecentSalesTableComponent,
+    SomeRandomUnclearDiagramComponent,
   ],
   imports: [
     BrowserModule,
