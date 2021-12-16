@@ -61,15 +61,16 @@ import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar
 import { WriteMessageDialogComponent } from './apps/inbox/write-message-dialog/write-message-dialog.component';
 
 
-import { FillerComponent } from './page-layouts/filler/filler.component';
+import { FillerComponent } from './page-layouts/filler/filler.component'
 
 import { MatDividerModule} from "@angular/material/divider";
 import { MatTableModule} from "@angular/material/table";
 import { MatSortModule} from "@angular/material/sort";
 import { MatPaginatorModule} from "@angular/material/paginator";
 import { MatSelectModule } from '@angular/material/select';
-import { TotalSalesComponent } from './dashboard/total-sales/total-sales.component';
+
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { TotalSalesComponent } from './dashboard/total-sales/total-sales.component';
 import { VisitsComponent } from './dashboard/visits/visits.component';
 import { TotalClicksComponent } from './dashboard/total-clicks/total-clicks.component';
 import { ConversionsComponent } from './dashboard/conversions/conversions.component';
@@ -122,8 +123,6 @@ import { TopCategoriesDiagramComponent } from './dashboard/top-categories-diagra
     RecentSalesTableComponent,
     SomeRandomUnclearDiagramComponent,
     TopCategoriesDiagramComponent,
-    ScaleLinear, 
-    ScaleBand
   ],
   imports: [
     BrowserModule,

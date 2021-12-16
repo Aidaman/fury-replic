@@ -75,9 +75,7 @@ export class RecentSalesTableComponent implements AfterViewInit {
   @ViewChild('MatPaginator') paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _liveAnnouncer: LiveAnnouncer) {
-    
-  }
+  constructor(private _liveAnnouncer: LiveAnnouncer) {}
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

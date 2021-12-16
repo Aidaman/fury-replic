@@ -12,6 +12,7 @@ export class ActiveUsersDiagramComponent implements OnInit {
   private subscription!: Subscription;
   private dataLength: number = data[0].series.length;
 
+  public ActiveUsersRightNow: number = this.sumOfData();
   public data: IChartData[] = data;
   public height: number = 200;
   public width: number = 600;
@@ -38,6 +39,7 @@ export class ActiveUsersDiagramComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.$tick.subscribe( () => {
       this.moveDiagramData();
+      this.ActiveUsersRightNow = this.sumOfData();
     });
   }
 
@@ -61,12 +63,19 @@ export class ActiveUsersDiagramComponent implements OnInit {
     let tmpData: any = this.data[0].series;
     tmpData.push({
       name: "a few seconds ago" + (++this.dataLength),
-      value: Math.round(Math.random() * (100 - 10) + 10)
+      value: Math.round(Math.random() * (10 - 1) + 1)
     });
     tmpData.shift();
     this.data = [{
       name: "",
       series: tmpData
     }];    
+  }
+  private sumOfData(): number{
+    let tmp: number = 0;
+    for (let i = 0; i < data[0].series.length; i++) {
+      tmp += data[0].series[i].value;         
+    }
+    return tmp;
   }
 }

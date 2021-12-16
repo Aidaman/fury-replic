@@ -13,7 +13,7 @@ export function createData() : any[]{
   for (let i = 0; i < 20; i++) {
     tmpArr.push({
       name: "a few seconds ago" + i,
-      value: Math.round(Math.random() * (100 - 10) + 10)
+      value: Math.round(Math.random() * (10 - 1) + 1)
     });
   }
   let tmpData : IChartData[] = [
