@@ -59,7 +59,7 @@ import { Level5Component } from './level1/level2/level3/level4/level5/level5.com
 import { ExampleDialogComponent } from './components/dialog/example-dialog/example-dialog.component';
 import { ExampleSnackbarComponent } from './components/snackbar/example-snackbar/example-snackbar.component';
 import { WriteMessageDialogComponent } from './apps/inbox/write-message-dialog/write-message-dialog.component';
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { FillerComponent } from './page-layouts/filler/filler.component'
 
@@ -168,6 +168,7 @@ import { TopCategoriesDiagramComponent } from './dashboard/top-categories-diagra
     MatSortModule,
     MatSelectModule,
     NgxChartsModule,
+    DragDropModule,
     RouterModule.forRoot([
       { path: 'dashboard', component: DashboardComponent },
       { path: 'tables/all-in-one-table', component: AllInOneTableComponent },
